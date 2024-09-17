@@ -1,0 +1,10 @@
+Dentro de SRC se encontra o APP e o UI (Uma pasta que criei para organizar as outras pastas)
+    APP : Onde os scripts principais irão ficar
+    UI: Onde os códigos auxiliares irão ficar, sendo eles:
+        static: CSS e afin
+        templates: arquivos HTML
+        scripts: scripts js para modais e afins
+
+documentation: onde irá ficar a documentação
+
+requirementes: Onde irá ficar guardado as bibliotecas padrões utilizadas.
