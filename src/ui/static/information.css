@@ -7,29 +7,74 @@
     vertical-align:baseline;
 }
 
-.container {
+main {
     background-color: white;
-    border: 1px red;
-    padding: 25px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 100%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: auto 20% 40% 20%;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
-    place-items: center; /*Centraliza as div's*/
+    display: flex;
+    flex-direction: column;
 
+    row-gap: 10px;
+    column-gap: 30px;
 }
 
-.linha1 {
+.perfil {
     background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: flex; /*Define a modo de exibição como flex*/
-    flex-direction: column;
-    grid-template-columns: 1fr 1fr;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
 
+.lado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 30px;
+    margin-top: 5%;
+    margin-inline: 2%;
+}
+
+.biografia {
+    background-color: rgb(138, 158, 250);
+    display: flex;
+    align-items: center;  
+    max-width: 50vw;
+    border: solid;
+    color: black;
+}
+
+.biografiatxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.biografia > img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.projetoslei {
+    background-color: rgb(138, 158, 250);
+    display: flex;
+    align-items: center;
+    max-width: 50vw;
+    height: 30vh;    
+    border: solid;
+    color: black;
+}
+
+.projetosleitxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2%;
 }
 
 .centralizarFoto{
