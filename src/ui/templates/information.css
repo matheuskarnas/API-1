@@ -1,0 +1,78 @@
+
+
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+    vertical-align:baseline;
+}
+
+.container {
+    background-color: white;
+    border: 1px red;
+    padding: 25px;
+    display: grid; /*Define a modo de exibição como grid*/
+    grid-template-columns: 100%;/*Define quantidade e comportamento das colunas*/
+    grid-template-rows: auto 20% 40% 20%;/*Altura das linha*/
+    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+    place-items: center; /*Centraliza as div's*/
+
+}
+
+.linha1 {
+    background-color: rgb(138, 158, 250);
+    border: 1px solid rgb(5, 3, 3);
+    padding: 0px;
+    display: flex; /*Define a modo de exibição como flex*/
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;/*Define quantidade e comportamento das colunas*/
+    grid-template-rows: 300px;/*Altura das linha*/
+    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+    
+
+}
+
+.centralizarFoto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        border-radius: 10%;
+        height: auto;
+    }
+}
+
+.linha1 div{
+    border: 1px solid blue;
+
+}
+
+.linha2 {
+    background-color: rgb(138, 158, 250);
+    border: 1px solid rgb(5, 3, 3);
+    padding: 0px;
+    display: grid; /*Define a modo de exibição como grid*/
+    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
+    grid-template-rows: 300px;/*Altura das linha*/
+    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+}
+
+.linha3 {
+    background-color: rgb(138, 158, 250);
+    border: 1px solid rgb(5, 3, 3);
+    padding: 0px;
+    display: grid; /*Define a modo de exibição como grid*/
+    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
+    grid-template-rows: 300px;/*Altura das linha*/
+    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+}
+
+.linha4 {
+    background-color: rgb(138, 158, 250);
+    border: 1px solid rgb(5, 3, 3);
+    padding: 0px;
+    display: grid; /*Define a modo de exibição como grid*/
+    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
+    grid-template-rows: 300px;/*Altura das linha*/
+    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+}
