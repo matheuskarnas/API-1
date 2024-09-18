@@ -3,10 +3,24 @@
     padding: 0;
  }
 
-.flex-container {
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+main {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100vw;
+    margin-inline: 20px;
 }
 
 .biografia {
@@ -43,4 +57,80 @@ h1{
     text-align: center;
     font-size: 30px;
     line-height: 40px;
+}
+
+.participações {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+    gap: 40px;
+}
+
+.posições-apresentadas {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px;
+    border-radius: 20px; 
+    width: 300px; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.comissões {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 40vw; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.histórico-político {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 20vw; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.comentários {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px;
+}
+
+.comentários > h1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+
+.caixa-comentário {
+    display: flex;  
+    padding: 20px;
+    border-radius: 20px; 
+    width: auto; 
+    margin: 20px;
+    gap: 20px;
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.botao {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
 }
