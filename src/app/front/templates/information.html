@@ -1,61 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
- *{
-    margin: 0;
-    padding: 0;
- }
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: white;
+    <link rel="stylesheet" href="../static/css/information.css">
 
-}
-
-.biografia {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 10px;
-    gap: 20px;
-    justify-content: center;
-}
-
-.bloco{
-    display: flex;
-    gap: 30px;
-}
-
-.grafico {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    margin: 10px;
-    gap: 20px;
-    justify-content: center;
-}
-
-@media (max-width: 1000px){
-    .grafico{
-        flex-direction: column;
-    }
-}
-
-h1{
-    text-align: center;
-    font-size: 30px;
-    line-height: 40px;
-}
-</style>
 </head>
-<body>
-
-
-<div class="flex-container">
+<body class="flex-container">
     <section class="biografia">
-        <div class="bloco">
+        <div class="blocoFoto">
             <div style="display: flex; width: 30%;">
                 <img src="./imagens/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto;">
             </div>
@@ -68,6 +19,7 @@ h1{
                 <p>E-mail: amelia@pt.com.br</p>
             </div>
         </div>
+
         <div style="display: flex; flex-direction: column; padding: 20px ; width: 650px; border-radius: 20px; box-shadow: 1px 1px 20px #888;">
             <h1>Projeto de lei</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
@@ -89,22 +41,13 @@ h1{
         <div style="display: flex; flex-direction: column; padding: 20px; border-radius: 20px; width: 400px; line-height: 40px; box-shadow: 1px 1px 20px #888;">
             <h1>Presença</h1>
             <img src="./imagens/grafico.png" style="display: flex;  width: auto; height: 100%;">
-        
         </div>
+
         <div style="display: flex; flex-direction: column; padding: 20px ; width: 900px; border-radius: 20px; box-shadow: 1px 1px 20px #888;">
             <h1>Posicionamento nas votações</h1>
             <img src="./imagens/grafico.png" style="display: flex;  width: auto; max-height: 300px;">
         </div>
     </section>
-
-  
-  
-  
-  
-  
-</div>
-
-
 
 </body>
 </html>
