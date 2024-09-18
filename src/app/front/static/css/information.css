@@ -1,123 +1,46 @@
-
-
 *{
     margin: 0;
-	padding: 0;
-	border: 0;
-    vertical-align:baseline;
-}
+    padding: 0;
+ }
 
-main {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-
-    row-gap: 10px;
-    column-gap: 30px;
-}
-
-.perfil {
-    background-color: rgb(138, 158, 250);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-}
-
-.lado {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    row-gap: 10px;
-    column-gap: 30px;
-    margin-top: 5%;
-    margin-inline: 2%;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
 }
 
 .biografia {
-    background-color: rgb(138, 158, 250);
     display: flex;
-    align-items: center;  
-    max-width: 50vw;
-    border: solid;
-    color: black;
-}
-
-.biografiatxt {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
 }
 
-.biografia > img{
+.blocoFoto{
     display: flex;
+    gap: 30px;
+}
+
+.grafico {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
     justify-content: center;
 }
 
-.projetoslei {
-    background-color: rgb(138, 158, 250);
-    display: flex;
-    align-items: center;
-    max-width: 50vw;
-    height: 30vh;    
-    border: solid;
-    color: black;
-}
-
-.projetosleitxt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 2%;
-}
-
-.centralizarFoto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        border-radius: 10%;
-        height: auto;
+@media (max-width: 1000px){/*Trata responsividade. Tem que configurar*/
+    .grafico{
+        flex-direction: column;
     }
 }
 
-.linha1 div{
-    border: 1px solid blue;
-
-}
-
-.linha2 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
-}
-
-.linha3 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
-}
-
-.linha4 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+h1{
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
 }
