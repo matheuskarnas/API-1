@@ -1,123 +1,136 @@
-
-
 *{
     margin: 0;
-	padding: 0;
-	border: 0;
-    vertical-align:baseline;
+    padding: 0;
+ }
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
 }
 
 main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-
-    row-gap: 10px;
-    column-gap: 30px;
-}
-
-.perfil {
-    background-color: rgb(138, 158, 250);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-}
-
-.lado {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    row-gap: 10px;
-    column-gap: 30px;
-    margin-top: 5%;
-    margin-inline: 2%;
+    width: 100vw;
+    margin-inline: 20px;
 }
 
 .biografia {
-    background-color: rgb(138, 158, 250);
     display: flex;
-    align-items: center;  
-    max-width: 50vw;
-    border: solid;
-    color: black;
-}
-
-.biografiatxt {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
 }
 
-.biografia > img{
+.blocoFoto{
     display: flex;
+    gap: 30px;
+}
+
+.grafico {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
+    margin: 20px;
+    gap: 20px;
     justify-content: center;
 }
 
-.projetoslei {
-    background-color: rgb(138, 158, 250);
-    display: flex;
-    align-items: center;
-    max-width: 50vw;
-    height: 30vh;    
-    border: solid;
-    color: black;
-}
-
-.projetosleitxt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 2%;
-}
-
-.centralizarFoto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        border-radius: 10%;
-        height: auto;
+@media (max-width: 1000px){/*Trata responsividade. Tem que configurar*/
+    .grafico{
+        flex-direction: column;
     }
 }
 
-.linha1 div{
-    border: 1px solid blue;
-
+h1{
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
 }
 
-.linha2 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+.participações {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px;
+    gap: 40px;
 }
 
-.linha3 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+.posições-apresentadas {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px;
+    border-radius: 20px; 
+    width: 300px; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
 }
 
-.linha4 {
-    background-color: rgb(138, 158, 250);
-    border: 1px solid rgb(5, 3, 3);
-    padding: 0px;
-    display: grid; /*Define a modo de exibição como grid*/
-    grid-template-columns: 200px 40% 40%;/*Define quantidade e comportamento das colunas*/
-    grid-template-rows: 300px;/*Altura das linha*/
-    gap: 25px;/*Adiciona espaçamento entre as celulas do grid*/
+.comissões {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 40vw; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.histórico-político {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 20vw; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.comentários {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px;
+}
+
+.comentários > h1 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+}
+
+.caixa-comentário {
+    display: flex;  
+    padding: 20px;
+    border-radius: 20px; 
+    width: auto; 
+    margin: 20px;
+    gap: 20px;
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888;
+}
+
+.botao {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
 }
