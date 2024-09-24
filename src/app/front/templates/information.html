@@ -8,11 +8,8 @@
     <main>
         <section class="biografia">
             <div class="blocoFoto">
-                <div style="display: flex; width: 30%;">
-                    <img src="./imagens/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto;">
-                </div>
-            
-                <div style="display: flex; flex-direction: column; padding: 20px; border-radius: 20px; width: 400px; line-height: 40px; box-shadow: 1px 1px 20px #888;">
+                <img src="../static/images/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto;">
+                <div class="biografiacard">
                     <h1>Biografia</h1>
                     <p>Nome: Amélia Naomi Omura</p>
                     <p>Telefone: (12) 393-0761</p>
@@ -21,7 +18,7 @@
                 </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; padding: 20px ; width: 650px; border-radius: 20px; box-shadow: 1px 1px 20px #888;">
+            <div class="projetolei">
                 <h1>Projeto de lei</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
                     in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
@@ -39,14 +36,14 @@
         </section>
         
         <section class="grafico">
-            <div style="display: flex; flex-direction: column; padding: 20px; border-radius: 20px; width: 400px; line-height: 40px; box-shadow: 1px 1px 20px #888;">
+            <div class="presença">
                 <h1>Presença</h1>
-                <img src="./imagens/grafico.png" style="display: flex;  width: auto; height: 100%;">
+                <img src="../static/images/grafico.png" style="display: flex;  width: auto; height: 300px;">
             </div>
 
-            <div style="display: flex; flex-direction: column; padding: 20px ; width: 900px; border-radius: 20px; box-shadow: 1px 1px 20px #888;">
+            <div class="posicionamento">
                 <h1>Posicionamento nas votações</h1>
-                <img src="./imagens/grafico.png" style="display: flex;  width: auto; max-height: 300px;">
+                <img src="../static/images/grafico.png" style="display: flex;  width: auto; max-height: 300px;">
             </div>
         </section>
 
@@ -99,24 +96,21 @@
                 </p>
             </div>
         </section>
-    </main>
 
-    <footer>
         <section class="comentários">
             <h1>Comentários</h1>
-            <article>
-                <div class="caixa-comentário">
-                    <img src="./imagens/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto; box-shadow: 1px 1px 20px #888;">
-                    <div style="display: flex; flex-direction: column;">
-                        <h2>Nome de usuario</h2>
-                        <p>Data de publicação: <input type="date" style="margin-bottom: 20px; width: 7vw;"></p>
-                        <textarea rows="7" cols="130" maxlength="300" required></textarea>
-                        <button class="botao" type="button">Enviar</button>
-                    </div>
+            <article class="caixa-comentário">
+                <img src="../static/images/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto; box-shadow: 1px 1px 20px #888;">
+                <div style="display: flex; flex-direction: column;">
+                    <input type="text" placeholder="Nome de usuário" style="max-width: 12vw; height: 20px;" required>
+                    <label for="datapublicação">Data de publicação:</label>
+                    <input type="date" id="datapublicação" style="margin-bottom: 20px; width: 7vw;">
+                    <textarea rows="7" cols="82" maxlength="300" required></textarea>
+                    <button class="botao" type="button">Enviar</button>
                 </div>
             </article>
         </section>
-    </footer>
+    </main>
 
 </body>
 </html>
