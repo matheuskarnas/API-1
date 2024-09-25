@@ -1,0 +1,212 @@
+/* Reset básico e configuração de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+header .logo {
+    width: 30%;
+    height: auto;
+}
+
+header #btn-filter,
+header #btn-search {
+    padding: 3px;
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2); /* #00000033 */
+    background-color: rgb(255, 255, 255); /* #ffffff */
+}
+
+header #btn-filter {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 500; /* font-weight: medium */
+    color: rgb(132, 132, 132); /* #848484 */
+}
+
+header #btn-search {
+    padding: 3px 5px;
+    font-size: 16px;
+    font-weight: 300; /* font-weight: light */
+}
+
+/* Estilo do botão de abrir modal */
+#open-modal {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    font-size: 20px;
+    box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2); /* #00000033 */
+    color: rgb(255, 255, 255); /* #ffffff */
+    background-color: rgb(29, 116, 230); /* #1d74e6 */
+    cursor: pointer;
+}
+
+/* Estilo do container principal */
+.container {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do fundo e modal */
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* #00000099 */
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem; /* 8px */
+    transform: translate(-50%, -50%);
+    background-color: rgb(229, 231, 235); /* #E5E7EB */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 80%;
+}
+
+/* Estilo das imagens e seções do modal */
+#modal img {
+    width: 90%;
+    height: 100%;
+}
+
+#modal .left {
+    border-radius: 0.375rem; /* 6px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#modal .right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 2fr 2fr 2fr 1fr 1fr;
+    gap: 0.5rem; /* 8px */
+}
+
+.name,
+.tel {
+    grid-column: span 1;
+}
+
+.partido,
+.email {
+    grid-column: span 2;
+}
+
+.right h1 {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+    font-weight: 600;
+}
+
+.right p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+    color: rgb(107, 114, 128); /* #6b7280 */
+}
+
+.right a {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    color: rgb(255, 255, 255); /* #ffffff */
+    background-color: rgb(29, 116, 230); /* #1d74e6 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo dos botões dentro do modal */
+.comparation,
+.aboutmore {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.close-modal {
+    grid-column: span 2;
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    color: rgb(255, 255, 255); /* #ffffff */
+    background-color: rgb(239, 68, 68); /* #ef4444 */
+    cursor: pointer;
+}
+
+/* Estilo do modal e fade quando escondidos */
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    top: 0;
+}
+
+/* Estilo do rodapé */
+footer {
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    color: white; /* #ffffff */
+    background-color: rgb(29, 116, 230); /* #1d74e6 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

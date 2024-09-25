@@ -6,21 +6,15 @@
 body {
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: #dcdcdc;
 }
 
 main {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  background-color: white;
-}
-
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    width: 100vw;
-    margin-inline: 20px;
+  background-color: #dcdcdc;
 }
 
 .biografia {
@@ -28,13 +22,34 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     margin: 20px;
-    gap: 20px;
+    gap: 17px;
     justify-content: center;
 }
 
 .blocoFoto{
     display: flex;
     gap: 30px;
+}
+
+.biografiacard {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 400px; 
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888; 
+    background-color: white;
+}
+
+.projetolei {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px ; 
+    width: 650px; 
+    border-radius: 20px; 
+    box-shadow: 1px 1px 20px #888; 
+    background-color: white;
 }
 
 .grafico {
@@ -45,6 +60,29 @@ footer {
     margin: 20px;
     gap: 20px;
     justify-content: center;
+    align-items: center;
+}
+
+.presença {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    border-radius: 20px; 
+    width: 400px;
+    line-height: 40px; 
+    box-shadow: 1px 1px 20px #888; 
+    background-color: white;
+}
+
+.posicionamento {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px ; 
+    width: 900px;
+    height: auto; 
+    border-radius: 20px; 
+    box-shadow: 1px 1px 20px #888; 
+    background-color: white;
 }
 
 @media (max-width: 1000px){/*Trata responsividade. Tem que configurar*/
@@ -61,11 +99,12 @@ h1{
 
 .participações {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     width: 100%;
+    height: auto;
     margin: 20px;
-    gap: 40px;
+    gap: 29px;
 }
 
 .posições-apresentadas {
@@ -76,6 +115,7 @@ h1{
     width: 300px; 
     line-height: 40px; 
     box-shadow: 1px 1px 20px #888;
+    background-color: white;
 }
 
 .comissões {
@@ -86,6 +126,7 @@ h1{
     width: 40vw; 
     line-height: 40px; 
     box-shadow: 1px 1px 20px #888;
+    background-color: white;
 }
 
 .histórico-político {
@@ -96,32 +137,36 @@ h1{
     width: 20vw; 
     line-height: 40px; 
     box-shadow: 1px 1px 20px #888;
+    background-color: white;
 }
 
 .comentários {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
-    margin: 5px;
+    height: auto;
+    margin: 20px;
+    margin-inline: 3.9%;
+    border-radius: 20px; 
+    box-shadow: 1px 1px 20px #888;
+    background-color: white;
 }
 
 .comentários > h1 {
     display: flex;
     justify-content: flex-start;
-    margin-left: 25px;
+    margin-left: 2%;
+    margin-top: 1%;
 }
 
 .caixa-comentário {
-    display: flex;  
+    display: flex;
     padding: 20px;
-    border-radius: 20px; 
     width: auto; 
-    margin: 20px;
     gap: 20px;
     line-height: 40px; 
-    box-shadow: 1px 1px 20px #888;
 }
 
 .botao {
@@ -133,4 +178,5 @@ h1{
 
 textarea {
     resize: none;
+    background-color: #dcdcdc;
 }
