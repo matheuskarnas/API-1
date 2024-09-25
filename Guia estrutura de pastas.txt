@@ -8,3 +8,5 @@ Dentro de SRC se encontra o APP e o UI (Uma pasta que criei para organizar as ou
 documentation: onde irá ficar a documentação
 
 requirementes: Onde irão ficar guardadas as bibliotecas de padrões utilizados.
+
+
