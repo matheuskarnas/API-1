@@ -6,12 +6,19 @@ app = Flask(
   )
 
 @app.route("/")
-def index():
+def home():
   return render_template('home.html')
 
 @app.route("/information.html")
 def information():
   return render_template('information.html')
 
+@app.route("/perfil_vereador.html")
+def perfil_vereador():
+  return render_template('perfil_vereador.html')
+
+@app.route("/comp_vereador.html")
+def comp_vereador():
+  return render_template('comp_vereador.html')
 # Criação de Rotas
 app.run(debug=True)

@@ -10,27 +10,18 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="{{ url_for('static', filename='images/Debuggers.png') }}">
-            </div>
-
-            <div class="filtros">
-                <label for="filtro">Filtro</label>
-                <input type="filtro" id="filtro" name="filtro">
-            
-                <label for="busca">Busca</label>
-                <input type="busca" id="busca" name="busca">
-            </div>
-        </div>
-    </header>
+    {% include 'header.html' %}
+    <div>
+        {% block content %}{% endblock %}
+    </div>
 
     <main>
         <section>
             <div class="grid-container">
                 <div class="item">
-                    <img src="{{ url_for('static', filename='images/amélia.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
+                    <button id="open-modal">
+                        <img src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
+                    </button>
                     <h1>Amélia Naomi</h1>
                 </div>
 
@@ -117,6 +108,8 @@
 
         </section>
     </main>
+    <script src="{{url_for('static' , filename='scripts/script.js')}}" defer></script>
+
 </body>
 </html>
     
