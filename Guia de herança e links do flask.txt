@@ -1,0 +1,19 @@
+Para usar a herança do flask sempre abra chaves e porcentagens {% conteudo %} e use o include para incluir a pagina. Exemplo:
+vamos supor que queremos importar a pagina head.HTML
+
+{ % include 'head.html' %}
+
+
+Para usar os links e imgs no flask, deve se utilizar o ulr_for() para linkar os arquivos dentro do src=''. Exemplos:
+
+
+Para exibir uma imagem:
+<img src={{ url_for('static', filename='caminho da imagem')}}>
+
+
+Para scipts:
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+
+
+Para CSS:
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
