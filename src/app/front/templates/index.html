@@ -12,12 +12,13 @@
     <body>
         {% include 'header.html' %}
         <main>
-                <div class="item">
-                    <button id="open-modal">
-                        <img src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
-                    </button>
-                    <h2>Amélia Naomi</h2>
-                </div>
+            <div class="item card">
+                <button id="open-modal">
+                    <img src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
+                </button>
+                <h2>Amélia Naomi</h2>
+            </div>
+            
                 <div class="item">                   
                         <img src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
                     <h2>Amélia Naomi</h2>
@@ -139,13 +140,7 @@
                     <img src="{{ url_for('static', filename='images/fundo.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
                 </div>
 
-                <div class="item">
-                    <img src="{{ url_for('static', filename='images/fundo.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
-                </div>
-
-                <div class="item">
-                    <img src="{{ url_for('static', filename='images/fundo.jpg') }}" style="border-radius: 15px; box-shadow: 1px 1px 20px #888">
-                </div>
+                {% include 'modal.html' %}
             </div> 
     </main>
     <script

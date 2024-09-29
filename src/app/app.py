@@ -14,12 +14,13 @@ def home():
 def information():
   return render_template('information.html')
 
-@app.route("/perfil_vereador.html")
-def perfil_vereador():
-  return render_template('perfil_vereador.html')
-
 @app.route("/comp_vereador.html")
 def comp_vereador():
   return render_template('comp_vereador.html')
 
+@app.route("/teste.html")
+def teste():
+  return render_template('teste.html')
+
 app.run(debug=True)
+
