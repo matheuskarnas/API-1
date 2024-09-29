@@ -1,116 +1,149 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="../static/css/information.css">
-
-</head>
-<body>
+  <head>
+    {% include 'head.html'%}
+    <link rel="stylesheet" href="../static/css/information.css" />
+    <title>Debbugers | Perfil</title>
+  </head>
+  <body>
+    {% include 'header.html' %}
     <main>
-        <section class="biografia">
-            <div class="blocoFoto">
-                <img src="../static/images/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto;">
-                <div class="biografiacard">
-                    <h1>Biografia</h1>
-                    <p>Nome: Amélia Naomi Omura</p>
-                    <p>Telefone: (12) 393-0761</p>
-                    <p>Partido: Partido dos Trabalhadores (PT)</p>
-                    <p>E-mail: amelia@pt.com.br</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="card-foto">
+          <img
+            src="../static/images/amélia.jpg"
+            alt=""
+            style="border-radius: 20px; max-width: 100%; height: auto"
+          />
+        </div>
+        <div class="card-biografia">
+          <h1>Biografia</h1>
+          <p>Nome: Amélia Naomi Omura</p>
+          <p>Telefone: (12) 393-0761</p>
+          <p>Partido: Partido dos Trabalhadores (PT)</p>
+          <p>E-mail: amelia@pt.com.br</p>
+        </div>
+        <div class="card-projeto-de-lei">
+          <h1>Projeto de lei</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+        </div>
+      </div>
 
-            <div class="projetolei">
-                <h1>Projeto de lei</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-            </div>
-        </section>
-        
-        <section class="grafico">
-            <div class="presença">
-                <h1>Presença</h1>
-                <img src="../static/images/grafico.png" style="display: flex;  width: auto; height: 300px;">
-            </div>
+      <div class="container">
+        <div class="card-presença">
+          <h1>Presença</h1>
+          <img
+            src="../static/images/grafico.png"
+            style="display: flex; width: auto; height: 300px"
+          />
+        </div>
 
-            <div class="posicionamento">
-                <h1>Posicionamento nas votações</h1>
-                <img src="../static/images/grafico.png" style="display: flex;  width: auto; max-height: 300px;">
-            </div>
-        </section>
+        <div class="card-posicionamento">
+          <h1>Posicionamento nas votações</h1>
+          <img
+            src="../static/images/grafico.png"
+            style="display: flex; width: auto; max-height: 300px"
+          />
+        </div>
+      </div>
 
-        <section class="participações">
-            <div class="posições-apresentadas">
-                <h1>Posições apresentadas</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-            </div>
+      <div class="container">
+        <div class="card-posições-apresentadas">
+          <h1>Posições apresentadas</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+        </div>
+        <div class="card-comissões">
+          <h1>Comissões</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+        </div>
 
-            <div class="comissões">
-                <h1>Comissões</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-            </div>
+        <div class="card-histórico-político">
+          <h1>Histórico político</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            earum perferendis vero facilis, in praesentium maxime, odio ad
+            dolores sint non. Sit vero error, consectetur odio voluptatibus quia
+            illum quisquam?
+          </p>
+        </div>
+      </div>
 
-            <div class="histórico-político">
-                <h1>Histórico político</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum earum perferendis vero facilis,
-                    in praesentium maxime, odio ad dolores sint non. Sit vero error, consectetur odio voluptatibus
-                    quia illum quisquam?
-                </p>
-            </div>
-        </section>
-
-        <section class="comentários">
-            <h1>Comentários</h1>
-            <article class="caixa-comentário">
-                <img src="../static/images/amélia.jpg" alt="" style="border-radius: 20px; max-width: 100%; height: auto; box-shadow: 1px 1px 20px #888;">
-                <div style="display: flex; flex-direction: column;">
-                    <input type="text" placeholder="Nome de usuário" style="max-width: 12vw; height: 20px;" required>
-                    <label for="datapublicação">Data de publicação:</label>
-                    <input type="date" id="datapublicação" style="margin-bottom: 20px; width: 7vw;">
-                    <textarea rows="7" cols="82" maxlength="300" required></textarea>
-                    <button class="botao" type="button">Enviar</button>
-                </div>
-            </article>
-        </section>
+      <div class="card-comentários">
+        <h1>Comentários</h1>
+        <article class="caixa-comentário">
+          <img
+            src="../static/images/amélia.jpg"
+            alt=""
+            style="
+              border-radius: 20px;
+              max-width: 100%;
+              height: auto;
+              box-shadow: 1px 1px 20px #888;
+            "
+          />
+          <div style="display: flex; flex-direction: column">
+            <input
+              type="text"
+              placeholder="Nome de usuário"
+              style="max-width: 12vw; height: 20px"
+              required
+            />
+            <label for="datapublicação">Data de publicação:</label>
+            <input
+              type="date"
+              id="datapublicação"
+              style="margin-bottom: 20px; width: 7vw"
+            />
+            <textarea maxlength="300" required></textarea>
+            <button class="botao" type="button">Enviar</button>
+          </div>
+        </article>
+      </div>
     </main>
-
-</body>
+  </body>
 </html>

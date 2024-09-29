@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     {% include 'head.html'%}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/comp_vereador.css') }}">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/comp_vereador.css') }}"
+    />
+    <title>Debbugers | Comparação</title>
+  </head>
 
-{% include 'header.html' %}
-
-<body>
-    <div class="container">
-        <div class="main">
-            <div class="comparation">
-                <!-- Vereador Principal -->
-                <div class="vereador-principal">
-                    <img src="{{url_for('static' , filename='images/img_ex_cand.png')}}" alt="Imagem do Candidato">
-                </div>
-                <!-- Vereador Secundário -->
-                <div class="vereador-secondary">
-                    <img src="{{url_for('static' , filename='images/img_ex_cand.png')}}" alt="Imagem do Candidato">
-                </div>
-            </div>
-            <div class="buttons-vereadores">
-                <!-- Input de nome do vereador -->
-                <input type="submit"
-                       value="Nome do vereador" 
-                       id="name-vereador">
-                
-                <!-- Seleção de candidato -->
-                <select name="escolha-candidato" id="escolha-vereador">
-                    <option value="" selected>Escolha um candidato</option>
-                    <option value="Jair Bolsonaro">Jair Bolsonaro</option>
-                    <option value="Lula Inácio">Lula Inácio</option>
-                    <option value="Dilma Russefi">Dilma Russefi</option>
-                    <option value="Jetulio Vargas">Jetulio Vargas</option>
-                    <option value="Leonardo Di Caprio">Leonardo Di Caprio</option>
-                    <option value="Airton Senna">Airton Senna</option>
-                    <option value="Neymar Jr">Neymar Jr</option>
-                </select>  
-            </div>
-            <!-- Botão de Comparar -->
-            <button class="comparar" id="comparar">Comparar</button>
+  <body>
+    {% include 'header.html' %}
+    <main>
+      <section>
+        <div class="comparation">
+          <!-- Vereador Principal -->
+          <div class="vereador-principal">
+            <img
+              src="{{url_for('static' , filename='images/img_ex_cand.png')}}"
+              alt="Imagem do Candidato"
+            />
+          </div>
+          <!-- Vereador Secundário -->
+          <div class="vereador-secondary">
+            <img
+              src="{{url_for('static' , filename='images/img_ex_cand.png')}}"
+              alt="Imagem do Candidato"
+            />
+          </div>
         </div>
-    </div>
+        <div class="buttons-vereadores">
+          <!-- Input de nome do vereador -->
+          <input type="submit" value="Nome do vereador" id="name-vereador" />
+
+          <!-- Seleção de candidato -->
+          <select name="escolha-candidato" id="escolha-vereador">
+            <option value="" selected>Escolha um candidato</option>
+            <option value="Jair Bolsonaro">Jair Bolsonaro</option>
+            <option value="Lula Inácio">Lula Inácio</option>
+            <option value="Dilma Russefi">Dilma Russefi</option>
+            <option value="Jetulio Vargas">Jetulio Vargas</option>
+            <option value="Leonardo Di Caprio">Leonardo Di Caprio</option>
+            <option value="Airton Senna">Airton Senna</option>
+            <option value="Neymar Jr">Neymar Jr</option>
+          </select>
+        </div>
+        <!-- Botão de Comparar -->
+        <button class="comparar" id="comparar">Comparar</button>
+      </section>
+    </main>
     <!-- End of Main Content -->
 
     <!-- Footer -->
     <footer>
-        <p>@2024 Copyright | Fatec Jassen Vidal - São José dos Campos</p>
+      <p>@2024 Copyright | Fatec Jassen Vidal - São José dos Campos</p>
     </footer>
     <!-- End of Footer -->
-</body>
+  </body>
 </html>
