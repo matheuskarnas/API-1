@@ -1,36 +1,47 @@
-<button id="open-modal">Open modal</button>
+<button id="open-modal"></button>
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/modal.css') }}">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='css/modal.css') }}"
+/>
 
 <div id="fade" class="hide"></div>
-        <div id="modal" class="hide">
-            <div class="left">
-                <img src="{{url_for('static' , filename='images/img_ex_cand.png')}}" alt="Imagem do Candidato">
-            </div>
-            <div class="right">
-                <div class="name">
-                    <h1>Nome</h1>
-                    <p>Amélia Naomi</p>
-                </div>
-                <div class="tel">
-                    <h1>Telefone</h1>
-                    <p>(12) 3925-6588</p>
-                </div>
-                <div class="partido">
-                    <h1>Partido</h1>
-                    <p>PT (Partido dos Trabalhadores)</p>
-                </div>
-                <div class="email">
-                    <h1>Email</h1>
-                    <p>amelia@camarasjc.sp.gov.br</p>
-                </div>
-                <a href="comparationPage.html"><button class="comparation">Comparar</button></a>
-                <a href="informationPage.html"><button class="aboutmore">Saiba mais</button></a>
-                <button id="close-modal" class="close-modal">Voltar</button>
-            </div>
-        </div>
+<div id="modal" class="hide">
+  <div class="left">
+    <img
+      src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}"
+      alt="Imagem do Candidato"
+    />
+  </div>
+  <div class="right">
+    <div class="name">
+      <h1>Nome</h1>
+      <p>Amélia Naomi</p>
+    </div>
+    <div class="tel">
+      <h1>Telefone</h1>
+      <p>(12) 3925-6588</p>
+    </div>
+    <div class="partido">
+      <h1>Partido</h1>
+      <p>PT (Partido dos Trabalhadores)</p>
+    </div>
+    <div class="email">
+      <h1>Email</h1>
+      <p>amelia@camarasjc.sp.gov.br</p>
+    </div>
+    <a href="comparationPage.html"
+      ><button class="comparation">Comparar</button></a
+    >
+    <a href="informationPage.html"
+      ><button class="aboutmore">Saiba mais</button></a
+    >
+    <button id="close-modal" class="close-modal">Voltar</button>
+  </div>
+</div>
 
-        <script
-        src="{{url_for('static' , filename='scripts/script.js')}}"
-        defer
-      ></script>
+<script
+  src="{{url_for('static' , filename='scripts/script.js')}}"
+  defer
+></script>
