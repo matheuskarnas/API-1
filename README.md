@@ -4,7 +4,7 @@
 
 # Índice
 
-- [Objetivo do Projeto](#objetivo-do-produto)
+- [Objetivo do Projeto](#objeto-do-produto)
 - [Vídeos e Apresentações](#vídeos-e-apresentações)
 - [Backlog do Produto](#backlog-do-produto)
 - [Backlog da Sprint](#backlog-da-sprint)
@@ -37,46 +37,40 @@ especiais e permanentes
   <table>
   <tr>
     <td align="center" width="96">
-      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-        <img src="documentation/images/html5.svg" width="48" height="48" alt="HTML" />
-      </a>
+      <img src="documentation/images/html5.svg" width="48" height="48" alt="HTML" />
       <span>HTML</span>
     </td>
     <td align="center" width="96">
-      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-        <img src="documentation/images/css3.svg" width="48" height="48" alt="CSS" />
-      </a>
+      <img src="documentation/images/css3.svg" width="48" height="48" alt="CSS" />
       <span>CSS</span>
     </td>
     <td align="center" width="96">
-      <a target="_blank" href="https://www.figma.com/">
-        <img src="documentation/images/figma.svg" width="48" height="48" alt="Figma" />
-      </a>
+      <img src="documentation/images/figma.svg" width="48" height="48" alt="Figma" />
       <span>Figma</span>
     </td>
     <td align="center" width="96">
-      <a target="_blank" href="https://www.python.org/">
-        <img src="documentation/images/python.svg" width="48" height="48" alt="Python" />
-      </a>
+      <img src="documentation/images/python.svg" width="48" height="48" alt="Python" />
       <span>Python</span>
      </td>
     <td align="center" width="96">
-      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-        <img src="documentation/images/javascript.svg" width="48" height="48" alt="JavaScript" />
-      </a>
-      <span>JavaScript</span>
+      <img src="documentation/images/github.png" width="48" height="48" alt="GitHub" />
+      <span>GitHub</span>
     </td>
-      <td align="center" width="96">
-      <a href="https://www.mysql.com/">
-      <img src="documentation/images/mysql.png" width="48" height="48" alt="MySQL" />
-      </a>
-      <span>MySQL</span>
-      </td>
     <td align="center" width="96">
-      <a target="_blank" href="https://flask.palletsprojects.com/en/3.0.x/">
-        <img src="documentation/images/flask.svg" width="48" height="48" alt="Flask"/>
-      </a>
+      <img src="documentation/images/mysql.png" width="48" height="48" alt="MySQL" />
+      <span>MySQL</span>
+    </td>
+    <td align="center" width="96">
+      <img src="documentation/images/flask.svg" width="48" height="48" alt="Flask"/>
       <span>Flask</span>
+    </td>
+    <td align="center" width="96">
+      <img src="documentation/images/discord.png" width="48" height="48" alt="Discord"/>
+      <span>Discord</span>
+    </td>
+    <td align="center" width="96">
+      <img src="documentation/images/jira.png" width="48" height="48" alt="Jira"/>
+      <span>Jira</span>
     </td>
   </tr>
 </table>
@@ -189,10 +183,10 @@ especiais e permanentes
 | :-----------: | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner | Lucas Martins |        [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LucasMSCarmo)        |
 | Scrum Master  | Matheus Karnas   |    [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/matheuskarnas/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/matheuskarnas)    |
-|  Team Member  | Marcos Yudi    |    [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/antonio-nepomuceno-04943720a/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/marcosyudi)    |
-|  Team Member  | Julia Rosa    |       [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julia-da-rosa-silva-26455bb0/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/juliaroosas)        |
-|  Team Member  | Victor Chagas   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/victorchagas-93) |
-|  Team Member  | Lucas Araujo   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-araujo-448115329/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LucasAraujo1016)          |
-|  Team Member  | Gabriel Robert   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LittleRob120)          |
-|  Team Member  | Pedro Rosa   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/PedHr) |
-|  Team Member  | Thomaz Feitosa   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/PedHr) |
+|  Scrum Team  | Marcos Yudi    |    [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/antonio-nepomuceno-04943720a/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/marcosyudi)    |
+|  Scrum Team  | Julia Rosa    |       [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julia-da-rosa-silva-26455bb0/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/juliaroosas)        |
+|  Scrum Team  | Victor Chagas   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/victorchagas-93) |
+|  Scrum Team  | Lucas Araujo   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-araujo-448115329/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LucasAraujo1016)          |
+|  Scrum Team  | Gabriel Robert   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/LittleRob120)          |
+|  Scrum Team  | Pedro Rosa   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/PedHr) |
+|  Scrum Team  | Thomaz Feitosa   | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/PedHr) |
