@@ -208,9 +208,10 @@ h1 {
   gap: 29px;
 }
 
-.comentários > h1 {
+.card-comentários > h2 {
   display: flex;
   justify-content: flex-start;
+  height: 10px;
   margin-left: 2%;
   margin-top: 1%;
 }
@@ -221,6 +222,13 @@ h1 {
   width: auto;
   gap: 20px;
   line-height: 40px;
+  align-items: center;
+}
+
+.caixa-comentário img {
+  max-height: 100px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 20px #888;
 }
 
 .botao {
