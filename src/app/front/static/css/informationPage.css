@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+.right {
+  display: none;
+}
+
 header,
 main {
   padding: 0 10%;
