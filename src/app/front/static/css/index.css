@@ -23,11 +23,6 @@ footer {
   padding: 0 10%;
 }
 
-/* Configuração links*/
-a {
-  text-decoration: none;
-}
-
 /* Estilo do header */
 header {
   display: flex;
@@ -75,18 +70,3 @@ main {
   margin-top: 50px;
 }
 
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.item img {
-  max-height: 250px;
-}
-
-.item h2 {
-  font-size: 18px;
-  line-height: 29px;
-}

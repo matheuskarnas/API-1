@@ -79,7 +79,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 35px;
-  margin-top: 40px;
 }
 
 /* Estilo da área principal */
@@ -124,6 +123,10 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.buttons-vereadores h3 {
+  margin-left: 18px;
 }
 
 /* Estilo do input de nome do vereador e seleção do vereador */
