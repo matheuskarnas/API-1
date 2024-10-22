@@ -86,7 +86,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  max-width: 400px;
   /* margin: 5%; */
 }
 
@@ -102,7 +102,7 @@ section {
 
 /* Estilo das imagens na área de comparação */
 .comparation img {
-  width: 75%;
+  width: 90%;
   height: auto;
   /* padding: 20px 20px 0 20px; */
   border: none;
@@ -134,9 +134,10 @@ section {
 /* Estilo do input de nome do vereador e seleção do vereador */
 #name-vereador,
 #escolha-vereador {
-  width: 49%;
-  padding: 4px 8px;
-  margin-top: 10px;
+  width: 47%;
+  padding: 4px 8px 4px 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   text-align: left;
   border: none;
   border-radius: 0.25rem; /* 4px */
@@ -211,33 +212,53 @@ footer {
 /* Responsividade */
 
 @media screen and (max-width: 600px) {
+
   header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 10%;
   }
   header img {
     height: 50px;
+    padding-left: 10%;
   }
-  header #btn-back {
-    margin-right: 0;
-    margin-top: 10px;
+
+  header #btn-search {
+    font-size: 14px;
+    font-weight: 300; 
   }
+
+  body, main, section {
+    padding: 5px;
+    margin-top: 15px;
 }
 
-#comparar {
-  width: 90%;
-  margin: 0 auto;
-  font-size: 16px;
-}
+  #comparar {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
 
-#name-vereador,
+  #name-vereador,
   #escolha-vereador {
-    width: 100%; /* Torna os inputs responsivos */
-    margin-bottom: 10px;
+    width: 45%;
+    font-size: 14px;
+    font-weight: 300; 
+    padding: 5px 10px 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  h3 {               
+    align-items: center;          
+    font-size: 14px;             
+    text-align: center;                          
+    margin: 0;                   
+    padding: 5px 0; 
   }
 
   footer {
-    padding: 15px 10px; 
-    font-size: 14px; 
+    padding: 15px 10px 15px 10px;
+    font-size: 12px; 
   }
+}
