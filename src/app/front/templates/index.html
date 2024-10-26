@@ -1,111 +1,157 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    {% include 'head.html'%}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='css/index.css') }}"
+{% include 'head.html'%}
+<title>Debbugers | Homepage</title>
+<main
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12"
+>
+  <div class="item card flex flex-col items-center gap-2">
+    <button id="open-modal">
+      <img
+        src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}"
+        class="rounded-xl shadow-xl max-h-60"
+      />
+    </button>
+    <h2 class="text-lg leading-7">AMÉLIA NAOMI</h2>
+  </div>
+
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. DR. JOSÉ CLAUDIO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
     />
-    <title>Debbugers | Homepage</title>
-  </head>
-  <body class="overflow-x-hidden">
-    {% include 'header.html' %}
-    <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
-      <div class="item card flex flex-col items-center gap-2">
-        <button id="open-modal">
-          <img src="{{ url_for('static', filename='images/VER. AMÉLIA NAOMI.jpg') }}" class="rounded-xl shadow-xl max-h-60" >
-        </button>
-        <h2 class="text-lg leading-7">AMÉLIA NAOMI</h2>
-      </div>
+    <h2 class="text-lg leading-7">DR. JOSÉ CLAUDIO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. DR. JOSÉ CLAUDIO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">DR. JOSÉ CLAUDIO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. DULCE RITA.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">DULCE RITA</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. DULCE RITA.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">DULCE RITA</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. FABIÃO ZAGUEIRO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">FABIÃO ZAGUEIRO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. FABIÃO ZAGUEIRO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">FABIÃO ZAGUEIRO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. FERNANDO PETITI.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">FERNANDO PETITI</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. FERNANDO PETITI.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">FERNANDO PETITI</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. JULIANA FRAGA.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">JULIANA FRAGA</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. JULIANA FRAGA.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">JULIANA FRAGA</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. JÚNIOR DA FARMÁCIA.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">JÚNIOR DA FARMÁCIA</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. JÚNIOR DA FARMÁCIA.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">JÚNIOR DA FARMÁCIA</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. JUVENIL SILVÉRIO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">JUVENIL SILVÉRIO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. JUVENIL SILVÉRIO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">JUVENIL SILVÉRIO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. LINO BISPO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">LINO BISPO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. LINO BISPO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">LINO BISPO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. MILTON VIEIRA FILHO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">MILTON VIEIRA FILHO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. MILTON VIEIRA FILHO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">MILTON VIEIRA FILHO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. RAFAEL PASCUCCI.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">RAFAEL PASCUCCI</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. RAFAEL PASCUCCI.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">RAFAEL PASCUCCI</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. RENATO SANTIAGO.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">RENATO SANTIAGO</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. RENATO SANTIAGO.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">RENATO SANTIAGO</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. ROBERTINHO DA PADARIA.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">ROBERTINHO DA PADARIA</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. ROBERTINHO DA PADARIA.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">ROBERTINHO DA PADARIA</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. ROBERTO CHAGAS.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">ROBERTO CHAGAS</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. ROBERTO CHAGAS.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">ROBERTO CHAGAS</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='/images/VER. ROGÉRIO DA ACASEM.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">ROGÉRIO DA ACASEM</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='/images/VER. ROGÉRIO DA ACASEM.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">ROGÉRIO DA ACASEM</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='/images/VER. THOMAZ HENRIQUE.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">THOMAZ HENRIQUE</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='/images/VER. THOMAZ HENRIQUE.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">THOMAZ HENRIQUE</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. WALTER HAYASHI.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">WALTER HAYASHI</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. WALTER HAYASHI.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">WALTER HAYASHI</h2>
-      </div>
+  <div class="item flex flex-col items-center gap-2">
+    <img
+      src="{{ url_for('static', filename='images/VER. ZÉ LUIS.jpg') }}"
+      class="rounded-xl shadow-xl max-h-60"
+    />
+    <h2 class="text-lg leading-7">ZÉ LUIS</h2>
+  </div>
 
-      <div class="item flex flex-col items-center gap-2">
-        <img src="{{ url_for('static', filename='images/VER. ZÉ LUIS.jpg') }}" class="rounded-xl shadow-xl max-h-60">
-        <h2 class="text-lg leading-7">ZÉ LUIS</h2>
-      </div>
-
-      {% include 'modal.html' %}
-    </main>
-    <script src="{{url_for('static' , filename='scripts/script.js')}}" defer></script>
-  </body>
-</html>
+  {% include 'modal.html' %}
+</main>
+<script
+  src="{{url_for('static' , filename='scripts/script.js')}}"
+  defer
+></script>
