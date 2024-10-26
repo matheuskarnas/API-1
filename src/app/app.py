@@ -1,25 +1,13 @@
-from flask import Flask, url_for, render_template
+from flask import Flask
+from back.routes.vereadorPageRoute import vereadorPage
 
-# Inicialização do Flask! Sempre manter no topo após importações.
-app = Flask(
-  __name__, template_folder="front/templates", static_folder="front/static"
-  )
+def create_app():
+    app = Flask(__name__, template_folder='front/templates', static_folder='front/static')
+    
+    app.register_blueprint(vereadorPage)  # Registrando o blueprint
 
-# ROTA PARA PÁGINA INDEX
-@app.route("/")
-def home():
-  return render_template('index.html')
+    return app
 
-
-# ROTA PARA PÁGINA DE INFORMAÇÃO
-@app.route("/informationPage.html")
-def information():
-  return render_template('informationPage.html')
-
-# ROTA PARA PÁGINA DE COMPARAÇÃO
-@app.route("/comparationPage.html")
-def comp_vereador():
-  return render_template('comparationPage.html')
-
-app.run(debug=True)
-
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True, host='0.0.0.0', port=80)
