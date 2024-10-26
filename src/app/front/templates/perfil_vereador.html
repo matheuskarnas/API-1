@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/perfil_cand.css') }}">
+
+        {% include 'header.html' %}
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+
+    </head>
+
+<body>
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <button id="open-modal">Open modal</button>
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="left">
+                <img src="{{url_for('static' , filename='images/img_ex_cand.png')}}" alt="Imagem do Candidato">
+            </div>
+            <div class="right">
+                <div class="name">
+                    <h1>Nome</h1>
+                    <p>Amélia Naomi</p>
+                </div>
+                <div class="tel">
+                    <h1>Telefone</h1>
+                    <p>(12) 3925-6588</p>
+                </div>
+                <div class="partido">
+                    <h1>Partido</h1>
+                    <p>PT (Partido dos Trabalhadores)</p>
+                </div>
+                <div class="email">
+                    <h1>Email</h1>
+                    <p>amelia@camarasjc.sp.gov.br</p>
+                </div>
+                <a href="#"><button class="comparation">Comparar</button></a>
+                <a href="#"><button class="aboutmore">Saiba mais</button></a>
+                <button id="close-modal" class="close-modal">Voltar</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer>
+        <p>@2024 Copyright | Fatec Jassen Vidal - São José dos Campos</p>
+    </footer>
+    <!-- End of Footer -->
+
+    <script src="{{url_for('static' , filename='scripts/script.js')}}" defer></script>
+</body>
+</html>

@@ -5,13 +5,21 @@ app = Flask(
   __name__, template_folder="front/templates", static_folder="front/static"
   )
 
+# Criação de Rotas
 @app.route("/")
-def index():
+def home():
   return render_template('index.html')
 
 @app.route("/information.html")
 def information():
   return render_template('information.html')
 
-# Criação de Rotas
+@app.route("/perfil_vereador.html")
+def perfil_vereador():
+  return render_template('perfil_vereador.html')
+
+@app.route("/comp_vereador.html")
+def comp_vereador():
+  return render_template('comp_vereador.html')
+
 app.run(debug=True)
