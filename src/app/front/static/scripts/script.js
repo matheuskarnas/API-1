@@ -1,48 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    const modal = document.getElementById('modal');
-    const fade = document.getElementById('fade');
-    const closeModalButton = document.getElementById('close-modal');
-  
-    // Elementos do modal a serem preenchidos dinamicamente
-    const modalNome = document.getElementById('modal-nome');
-    const modalImg = document.getElementById('modal-img');
-    const modalTel = document.getElementById('modal-tel');
-    const modalPartido = document.getElementById('modal-partido');
-    const modalEmail = document.getElementById('modal-email');
-  
-    // Função para abrir o modal e preencher as informações
-    openModalButtons.forEach(button => {
-      button.addEventListener('click', function () {
-        const nome = this.getAttribute('data-nome');
-        const img = this.getAttribute('data-img');
-        const tel = this.getAttribute('data-tel');
-        const partido = this.getAttribute('data-partido');
-        const email = this.getAttribute('data-email');
-  
-        // Preencher os dados no modal
-        modalNome.textContent = nome;
-        modalImg.src = img;
-        modalTel.textContent = tel;
-        modalPartido.textContent = partido;
-        modalEmail.textContent = email;
-  
-        // Mostrar o modal e o fundo escurecido
+  const modal = document.getElementById('modal');
+  const fade = document.getElementById('fade');
+  const modalNome = document.getElementById('modal-nome');
+  const modalImg = document.getElementById('modal-img');
+  const modalTel = document.getElementById('modal-tel');
+  const modalPartido = document.getElementById('modal-partido');
+  const modalEmail = document.getElementById('modal-email');
+  const openModalButtons = document.querySelectorAll('.open-modal');
+  const closeModalButton = document.getElementById('close-modal');
+  const aboutMoreButton = document.querySelector('.aboutmore');
+
+  openModalButtons.forEach(button => {
+     button.addEventListener('click', () => {
+        // Preencher as informações no modal
+        modalNome.textContent = button.getAttribute('data-nome');
+        modalImg.src = button.getAttribute('data-img');
+        modalTel.textContent = button.getAttribute('data-tel');
+        modalPartido.textContent = button.getAttribute('data-partido');
+        modalEmail.textContent = button.getAttribute('data-email');
+
+        // Atualizar o link "Saiba mais" com o ID correto
+        const vereadorId = button.getAttribute('data-id');
+
+        // Mostrar o modal
         modal.classList.remove('hide');
         fade.classList.remove('hide');
-      });
-    });
-  
-    // Função para fechar o modal
-    closeModalButton.addEventListener('click', function () {
-      modal.classList.add('hide');
-      fade.classList.add('hide');
-    });
-  
-    // Fechar o modal ao clicar no fundo escurecido
-    fade.addEventListener('click', function () {
-      modal.classList.add('hide');
-      fade.classList.add('hide');
-    });
+
+        // Adicionar evento de clique ao botão "Saiba mais"
+        aboutMoreButton.addEventListener('click', function () {
+           window.location.href = `/detalhes/${vereadorId}`;
+        });
+     });
   });
-  
+
+  // Fechar modal ao clicar no botão "Voltar"
+  closeModalButton.addEventListener('click', () => {
+     modal.classList.add('hide');
+     fade.classList.add('hide');
+  });
+
+  // Fechar modal ao clicar fora dele (no fundo escuro "fade")
+  fade.addEventListener('click', () => {
+     modal.classList.add('hide');
+     fade.classList.add('hide');
+  });
+});

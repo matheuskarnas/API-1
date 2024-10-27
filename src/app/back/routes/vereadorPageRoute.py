@@ -25,9 +25,12 @@ def detalhes_vereador(id):
     vereador = cur.fetchone()
     con.close()
     if vereador:
-        return render_template('teste.html', vereador=vereador)
+        return render_template('informationPage.html', vereador=vereador)
     else:
         return "Vereador não encontrado!", 404
     
+@vereadorPage.route('/compPage')
+def comparationPage():
+    return render_template('comparationPage.html')
 
 

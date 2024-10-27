@@ -1,0 +1,45 @@
+/* Estilo do header */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+/* Estilo da logo no header */
+header img {
+  height: 75px;
+}
+
+/* Estilo do botão de voltar no header */
+header #btn-back {
+  padding: 3px 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 500; /* Font-weight: medium */
+  text-decoration: none;
+  border: none;
+  border-radius: 0.25rem; /* 4px */
+  box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2); /* #00000033 */
+  color: rgb(255, 255, 255); /* #ffffff */
+  background-color: rgb(239, 68, 68); /* #ef4444 */
+  cursor: pointer;
+}
+
+/* Estilo do input de busca no header */
+header #btn-search {
+  padding: 3px 5px;
+  font-size: 16px;
+  font-weight: 300; /* Font-weight: light */
+  border: none;
+  border-radius: 0.25rem; /* 4px */
+  box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2); /* #00000033 */
+  background-color: rgb(255, 255, 255); /* #ffffff */
+}
+
+/*padding nos elementos filhos do body*/
+header,
+main,
+footer {
+  padding: 0 10%;
+}

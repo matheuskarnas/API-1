@@ -33,11 +33,13 @@
          {% for vereador in vereadores %}
          <div class="item flex flex-col items-center gap-2">
             <!-- Botão para abrir o modal -->
-            <button class="open-modal" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
-            <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
+            <button class="open-modal" data-id="{{ vereador[0] }}" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
+               <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
             </button>
             <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
          </div>
+         {% endfor %}
+      </main>
       <!-- Estrutura do Modal  -->
       <div id="fade" class="hide"></div>
       <div id="modal" class="hide">
@@ -61,14 +63,14 @@
                <h1>Email</h1>
                <p id="modal-email"></p>
             </div>
-            <a href="comparationPage.html"><button class="comparation">Comparar</button></a>
-            <a href="{{url_for('vereador.detalhes_vereador', id=vereador[0])}}"><button class="aboutmore">Saiba mais</button></a>
+            <a href="/compPage"><button class="comparation">Comparar</button></a>
+            <a><button class="aboutmore">Saiba mais</button></a>
             
             <button id="close-modal" class="close-modal bg-green-500">Voltar</button>
 
          </div>
       </div>
-      {% endfor %}
+
 
       <!-- Link para o arquivo JS -->
       <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
