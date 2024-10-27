@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    {% include 'head.html'%}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='css/index.css') }}"
-    />
-    <title>Debbugers | Homepage</title>
-  </head>
+   <head>
+      {% include 'head.html' %}
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+      <title>Debbugers | Homepage</title>
+   </head>
 
-  <body class="overflow-x-hidden">
-
-    <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
-
-      <div class="item card flex flex-col items-center gap-2">
-        {% for vereador in vereadores %}
-
-        <button class="open-modal" 
-          data-name="{{ vereador[1] }}" 
-          data-telefone="{{ vereador[6] }}" 
-          data-partido="{{ vereador[3] }}" 
-          data-email="{{ vereador[5] }}" 
-          data-img="{{ vereador[2] }}">
-            
-          <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-60" alt="{{ vereador[1] }}">
-        </button>
-
-        <h2 class="text-lg leading-7">{{ vereador[1] }}</h2>
-        {% endfor %}
+   <!-- Header -->
+   <header>
+      <!-- Logo team -->
+      <a href="/">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" />
+      </a>
+      <div class="right">
+         <!-- Botão de buscar por filtros -->
+         <input id="btn-filter" type="submit" value="Filtro" name="filter" />
+         <!-- Input de busca por nome, partido, comissões, etc. -->
+         <input
+            id="btn-search"
+            type="text"
+            name="search"
+            placeholder="Pesquise aqui"
+            />
       </div>
+   </header>
+   <body>
 
-      {% include 'modal.html' %}
-    </main>
-    <script src="{{url_for('static' , filename='scripts/script.js')}}" defer></script>
-  </body>
+      <!-- Main para iniciar a aplicação -->
+      <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
+      <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
+      {% for vereador in vereadores %}
+      <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
+         <div class="item flex flex-col items-center gap-2">
+            <!-- Botão para abrir o modal -->
+            <button class="open-modal" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
+            <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
+            </button>
+            <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
+         </div>
+      </main>
+
+      <!-- Estrutura do Modal  -->
+      <div id="fade" class="hide"></div>
+      <div id="modal" class="hide">
+         <div class="left">
+            <img id="modal-img" src="" alt="Imagem do Candidato" />
+         </div>
+         <div class="right">
+            <div class="name">
+               <h1>Nome</h1>
+               <p id="modal-nome"></p>
+            </div>
+            <div class="tel">
+               <h1>Telefone</h1>
+               <p id="modal-tel"></p>
+            </div>
+            <div class="partido">
+               <h1>Partido</h1>
+               <p id="modal-partido"></p>
+            </div>
+            <div class="email">
+               <h1>Email</h1>
+               <p id="modal-email"></p>
+            </div>
+            <a href="comparationPage.html"><button class="comparation">Comparar</button></a>
+            <a href="{{url_for('vereador.detalhes_vereador', id=vereador[0])}}"><button class="aboutmore">Saiba mais</button></a>
+            <button id="close-modal" class="close-modal bg-green-500">Voltar</button>
+         </div>
+      </div>
+         {% endfor %}
+      <!-- Link para o arquivo JS -->
+      <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+   </body>
 </html>

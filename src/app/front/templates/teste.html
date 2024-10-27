@@ -1,0 +1,113 @@
+{% include 'head.html'%}
+<title>Debbugers | Perfil</title>
+
+      <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
+
+
+<main class="flex flex-col items-center gap-5 p-4">
+    <div class="flex flex-col md:flex-row gap-5 w-full">
+        <div class="card-biografia p-5 rounded-2xl bg-white w-full md:w-1/3" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+          <img src="{{ vereador[2]}}" alt="" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+            <h1 class="text-2xl text-center mb-3">Candidato(a)</h1>
+            <p class="text-center">Nome: {{ vereador[1]}}</p>
+            <p class="text-center">Telefone: {{ vereador[6]}}</p>
+            <p class="text-center">Partido: {{ vereador[3]}}</p>
+            <p class="text-center">E-mail: {{ vereador[5]}}</p>
+        </div>
+        <div class="card-projeto-de-lei p-5 rounded-2xl bg-white w-full md:w-2/3" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Projetos de lei</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-5 w-full">
+        <div class="card-presença p-5 rounded-2xl bg-white w-full md:w-2/5" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Presença nas sessões</h1>
+            <img src="../static/images/grafico.png" class="w-full h-72 object-cover" />
+        </div>
+
+        <div class="card-posicionamento p-5 rounded-2xl bg-white w-full md:w-3/5" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Posicionamento nas votações</h1>
+            <img src="../static/images/grafico.png" class="w-full h-72 object-cover" />
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-5 w-full">
+        <div class="card-posições-apresentadas p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Proposições apresentadas</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="card-comissões p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Comissões</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-5 w-full">
+        <div class="card-histórico-político rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mt-5 mb-3">Histórico político</h1>
+            <p class="ml-5 mr mr-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+    <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+        <h1 class="text-xl text-center mb-3">Comentários</h1>
+        <div class="caixa-comentário flex flex-col gap-4">
+            <img src="../static/images/img_ex_cand.png" alt="Comentário" class="w-12 h-12" />
+            <input
+                type="text"
+                placeholder="Nome de usuário"
+                class="border rounded p-2"
+                required
+            />
+            <label for="datapublicação">Data de publicação:</label>
+            <input
+                type="date"
+                id="datapublicação"
+                class="border rounded p-2"
+            />
+            <textarea maxlength="300" class="border rounded p-2" required></textarea>
+            <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<!-- SEPARAÇÃO DAQUI -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Vereador</title>
+</head>
+<body>
+    <h1>Detalhes do Vereador</h1>
+    <p><strong>Nome:</strong> {{ vereador[1] }}</p> <!-- Nome na posição 1 -->
+    <p><strong>Telefone:</strong> {{ vereador[2] }}</p> <!-- Telefone na posição 2 -->
+    <p><strong>Email:</strong> {{ vereador[3] }}</p> <!-- Email na posição 3 -->
+    <!-- Adicione mais campos conforme necessário -->
+    <a href="{{ url_for('vereador.listar_vereadores') }}">Voltar à lista de vereadores</a>
+</body>
+</html>

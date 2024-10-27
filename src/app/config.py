@@ -9,3 +9,9 @@ class Config:
   DBHOST = os.getenv('DBHOST')
   DBNAME = os.getenv('DBNAME')
   
+datacfg = {
+    'user': Config.DBUSER,
+    'password': Config.DBPASS,
+    'host': Config.DBHOST,
+    'database': Config.DBNAME  
+}
