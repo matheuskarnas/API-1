@@ -29,8 +29,8 @@
       <!-- Main para iniciar a aplicação -->
       <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
       <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
-      {% for vereador in vereadores %}
       <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
+         {% for vereador in vereadores %}
          <div class="item flex flex-col items-center gap-2">
             <!-- Botão para abrir o modal -->
             <button class="open-modal" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
@@ -38,8 +38,6 @@
             </button>
             <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
          </div>
-      </main>
-
       <!-- Estrutura do Modal  -->
       <div id="fade" class="hide"></div>
       <div id="modal" class="hide">
@@ -65,10 +63,13 @@
             </div>
             <a href="comparationPage.html"><button class="comparation">Comparar</button></a>
             <a href="{{url_for('vereador.detalhes_vereador', id=vereador[0])}}"><button class="aboutmore">Saiba mais</button></a>
+            
             <button id="close-modal" class="close-modal bg-green-500">Voltar</button>
+
          </div>
       </div>
-         {% endfor %}
+      {% endfor %}
+
       <!-- Link para o arquivo JS -->
       <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
    </body>
