@@ -2,11 +2,13 @@ blinker==1.8.2
 click==8.1.7
 Flask==3.0.3
 flask-mysql-connector==1.1.0
+gunicorn==23.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==3.0.2
 mysql-connector-python==9.1.0
 numpy==2.1.2
+packaging==24.1
 pandas==2.2.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
