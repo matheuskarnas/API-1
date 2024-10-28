@@ -9,33 +9,43 @@
     />
     <title>Debbugers | Comparação</title>
   </head>
-
-  <body class="w-full h-full overflow-x-hidden">
+  <body>
+    {% include 'header.html'%}
     <main class="flex flex-col justify-center items-center gap-9">
       <section class="flex flex-col items-center max-w-md">
-        <div class="comparation flex justify-center items-center w-full gap-5 mb-5">
+        <div
+          class="comparation flex justify-center items-center w-full gap-5 mb-5"
+        >
           <!-- Vereador Principal -->
           <div class="vereador-principal flex justify-center items-center">
-            <img class="w-11/12 h-auto rounded-lg custom-shadow bg-white" 
+            <img
+              class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
               src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}"
               alt="Imagem do Candidato"
             />
           </div>
           <!-- Vereador Secundário -->
           <div class="vereador-secondary flex justify-center items-center">
-            <img class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
+            <img
+              class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
               src="{{url_for('static' , filename='images/img_ex_cand.png')}}"
               alt="Imagem do Candidato"
             />
           </div>
         </div>
-        <div class="buttons-vereadores flex justify-between items-center w-full">
+        <div
+          class="buttons-vereadores flex justify-between items-center w-full"
+        >
           <!-- Input de nome do vereador -->
           <!-- <input type="submit" value="Nome do vereador" id="name-vereador" /> -->
           <h3 class="ml-5">AMÉLIA NAOMI</h3>
 
           <!-- Seleção de candidato -->
-          <select class="w-[47%] p-1 px-2 mt-1.5 mb-2.5 text-left rounded text-base text-ellipsis custom-shadow text-custom-gray bg-white" name="escolha-candidato" id="escolha-vereador">
+          <select
+            class="w-[47%] p-1 px-2 mt-1.5 mb-2.5 text-left rounded text-base text-ellipsis custom-shadow text-custom-gray bg-white"
+            name="escolha-candidato"
+            id="escolha-vereador"
+          >
             <option value="" selected>Escolha um candidato</option>
             <option value="DR. JOSÉ CLAUDIO">Dr. José Claudio</option>
             <option value="DULCE RITA">Dulce Rita</option>
@@ -47,7 +57,12 @@
           </select>
         </div>
         <!-- Botão de Comparar -->
-        <button class="comparar w-full py-2.5 m-2.5 rounded text-xl text-white bg-[#1d74e6] cursor-pointer" id="comparar">Comparar</button>
+        <button
+          class="comparar w-full py-2.5 m-2.5 rounded text-xl text-white bg-[#1d74e6] cursor-pointer"
+          id="comparar"
+        >
+          Comparar
+        </button>
       </section>
 
       <!-- <table class="font-arial border-collapse w-full max-w-[1000px] overflow-x-auto mb-16">
@@ -89,12 +104,18 @@
         </tr>
       </table>
     </main> -->
-    <!-- End of Main Content -->
+      <!-- End of Main Content -->
 
-    <!-- Footer -->
-    <footer class="flex justify-center items-center text-center w-full h-[5%] p-2.5 fixed bottom-0 bg-[#1d74e6]">
-      <p class="text-white">@2024 Copyright | Fatec Jassen Vidal - São José dos Campos</p>
-    </footer>
-    <!-- End of Footer -->
+      <!-- Footer -->
+      <footer
+        class="flex justify-center items-center text-center w-full h-[5%] p-2.5 fixed bottom-0 bg-[#1d74e6]"
+      >
+        <p class="text-white">
+          @2024 Copyright | Fatec Jassen Vidal - São José dos Campos
+        </p>
+      </footer>
+      <!-- End of Footer -->
+      <!-- </body> -->
+    </main>
   </body>
 </html>
