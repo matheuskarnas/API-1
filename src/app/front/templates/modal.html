@@ -1,42 +1,39 @@
 <button id="open-modal"></button>
-
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/modal.css') }}">
-
-<div id="fade" class="hide"></div>
-<div id="modal" class="hide">
-  <div class="left">
-    <img
+<div id="fade" class="hide fixed top-0 left-0 w-full h-full bg-[#00000099] z-[5]"></div>
+<div id="modal" class="hide flex flex-col sm:flex-row md:flex-row justify-center items-center fixed left-1/2 top-1/2 z-10 w-[500px] max-w-[90%] p-5 mx-auto rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-white">
+  <div class="left flex justify-center items-center mr-2.5 rounded-md sm:w-[90%] w-[50%]">
+    <img class="w-[90%] h-auto"
       src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}"
       alt="Imagem do Candidato"
     />
   </div>
-  <div class="right">
-    <div class="name">
-      <h1>Nome</h1>
-      <p>Amélia Naomi</p>
+  <div class="right grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[2fr_2fr_2fr_1fr_1fr] w-full gap-2">
+    <div class="name col-span-1">
+      <h1 class="text-lg">Nome</h1>
+      <p class="text-base text-[#6b7280]">Amélia Naomi</p>
     </div>
-    <div class="tel">
-      <h1>Telefone</h1>
-      <p>(12) 3925-6588</p>
+    <div class="tel col-span-1">
+      <h1 class="text-lg">Telefone</h1>
+      <p class="text-base text-[#6b7280]">(12) 3925-6588</p>
     </div>
-    <div class="partido">
-      <h1>Partido</h1>
-      <p>PT (Partido dos Trabalhadores)</p>
+    <div class="partido col-span-2">
+      <h1 class="text-lg">Partido</h1>
+      <p class="text-base text-[#6b7280]">PT (Partido dos Trabalhadores)</p>
     </div>
-    <div class="email">
-      <h1>Email</h1>
-      <p>amelia@camarasjc.sp.gov.br</p>
+    <div class="email col-span-2">
+      <h1 class="text-lg">Email</h1>
+      <p class="text-base text-[#6b7280]">amelia@camarasjc.sp.gov.br</p>
     </div>
-    <a href="comparationPage.html"
-      ><button class="comparation">Comparar</button></a
+    <a class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline" href="comparationPage.html"
+      ><button class="comparation bg-transparent border-none text-white cursor-pointer">Comparar</button></a
     >
-    <a href="informationPage.html"
-      ><button class="aboutmore">Saiba mais</button></a
+    <a class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline" href="informationPage.html"
+      ><button class="aboutmore bg-transparent border-none text-white cursor-pointer">Saiba mais</button></a
     >
-    <button id="close-modal" class="close-modal bg-green-500">Voltar</button>
+    <button id="close-modal" class="close-modal bg-[#ef4444] col-span-2 border-none rounded text-white cursor-pointer">Voltar</button>
   </div>
 </div>
-
 <script
   src="{{url_for('static' , filename='scripts/script.js')}}"
   defer
