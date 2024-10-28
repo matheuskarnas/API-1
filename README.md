@@ -25,9 +25,19 @@ completo.
 especiais e permanentes
 
 # Vídeos e Apresentações
+
 ## Sprint 1
 
+### Objetivo da Sprint
+Criar as páginas do site e sua estrutura permitindo a navegação entre elas
+
 [![MVP - Sprint 1](https://img.youtube.com/vi/En5hxTBmlNE/0.jpg)](https://youtu.be/En5hxTBmlNE)
+
+## Sprint 2
+
+### Objetivo da Sprint
+Adicionar Tailwind para deixar as páginas resposivas e começar a integração das páginas com o banco de dados
+
 
 ## Tecnologias
 
@@ -70,6 +80,14 @@ especiais e permanentes
       <img src="documentation/images/jira.png" width="48" height="48" alt="Jira"/>
       <span>Jira</span>
     </td>
+    <td align="center" width="96">
+      <img src="documentation/images/jupyter.svg" width="48" height="48" alt="Jira"/>
+      <span>Jupyter</span>
+    </td>
+    <td align="center" width="96">
+      <img src="documentation/images/tailwind.png" width="48" height="48" alt="Jira"/>
+      <span>Tailwind</span>
+    </td>
   </tr>
 </table>
 </div>
@@ -83,55 +101,22 @@ especiais e permanentes
             <th style="border: 1px solid #ddd;">User Story</th>
             <th style="border: 1px solid #ddd;">Prioridade</th>
             <th style="border: 1px solid #ddd;">Estimativa</th>
+            <th style="border: 1px solid #ddd;">Sprint</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="border: 1px solid #ddd;">Presença nas Sessões</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar o percentual de presença de cada vereador nas sessões da Câmara e, caso existam faltas, se estas foram justificadas e qual foi a justificativa.</td>
-            <td style="border: 1px solid #ddd;">Baixa</td>
-            <td style="border: 1px solid #ddd;">3</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Proposições apresentadas</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar os Projetos de Lei, requerimentos e moções que cada vereador apresentou durante o seu mandato.</td>
-            <td style="border: 1px solid #ddd;">Média</td>
-            <td style="border: 1px solid #ddd;">5</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Projetos de Lei aprovados</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar os Projetos de Lei aprovados de cada vereador e o detalhamento das propostas aprovadas, com acesso ao conteúdo completo.</td>
-            <td style="border: 1px solid #ddd;">Baixa</td>
-            <td style="border: 1px solid #ddd;">5</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Posicionamento em votações</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar o posicionamento de cada vereador nas votações de questões-chave para o município.</td>
-            <td style="border: 1px solid #ddd;">Baixa</td>
-            <td style="border: 1px solid #ddd;">3</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Participação em Comissões</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar a participação de cada vereador nas comissões, com destaque para a forma como cada um se manifestou nas comissões especiais e permanentes.</td>
-            <td style="border: 1px solid #ddd;">Média</td>
-            <td style="border: 1px solid #ddd;">3</td>
+            <td style="border: 1px solid #ddd;">Lista completa de todos os vereadores atuais</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar uma lista completa de todos os vereadores em atuação.</td>
+            <td style="border: 1px solid #ddd;">Alta</td>
+            <td style="border: 1px solid #ddd;">1</td>
+            <td style="border: 1px solid #ddd;">1</td>
         </tr>
         <tr>
             <td style="border: 1px solid #ddd;">Perfil individual de cada vereador</td>
             <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar o perfil individual de cada vereador, sendo que neste perfil deverá conter: dados biográficos, histórico político, presença nas sessões, proposições apresentadas, Projetos de Lei aprovados, posicionamento em votações, participação em comissões.</td>
             <td style="border: 1px solid #ddd;">Alta</td>
             <td style="border: 1px solid #ddd;">8</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Ferramenta de busca e filtros</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de um recurso que permitisse buscar o perfil de cada vereador por nome, partido e atuação em temas específicos.</td>
-            <td style="border: 1px solid #ddd;">Alta</td>
-            <td style="border: 1px solid #ddd;">3</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Informação sobre reeleição de vereadores</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de saber quais vereadores estão se reelegendo.</td>
-            <td style="border: 1px solid #ddd;">Média</td>
             <td style="border: 1px solid #ddd;">1</td>
         </tr>
         <tr>
@@ -139,18 +124,63 @@ especiais e permanentes
             <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar um painel de estatísticas contendo a atuação geral de cada vereador na Câmara, comparando o desempenho entre eles.</td>
             <td style="border: 1px solid #ddd;">Média</td>
             <td style="border: 1px solid #ddd;">5</td>
+            <td style="border: 1px solid #ddd;">2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Presença nas Sessões</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar o percentual de presença de cada vereador nas sessões da Câmara e, caso existam faltas, se estas foram justificadas e qual foi a justificativa.</td>
+            <td style="border: 1px solid #ddd;">Baixa</td>
+            <td style="border: 1px solid #ddd;">3</td>
+            <td style="border: 1px solid #ddd;">2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Participação em Comissões</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar a participação de cada vereador nas comissões, com destaque para a forma como cada um se manifestou nas comissões especiais e permanentes.</td>
+            <td style="border: 1px solid #ddd;">Média</td>
+            <td style="border: 1px solid #ddd;">3</td>
+            <td style="border: 1px solid #ddd;">3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Proposições apresentadas</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar os Projetos de Lei, requerimentos e moções que cada vereador apresentou durante o seu mandato.</td>
+            <td style="border: 1px solid #ddd;">Média</td>
+            <td style="border: 1px solid #ddd;">5</td>
+            <td style="border: 1px solid #ddd;">3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Projetos de Lei aprovados</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar os Projetos de Lei aprovados de cada vereador e o detalhamento das propostas aprovadas, com acesso ao conteúdo completo.</td>
+            <td style="border: 1px solid #ddd;">Baixa</td>
+            <td style="border: 1px solid #ddd;">5</td>
+            <td style="border: 1px solid #ddd;">3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Posicionamento em votações</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar o posicionamento de cada vereador nas votações de questões-chave para o município.</td>
+            <td style="border: 1px solid #ddd;">Baixa</td>
+            <td style="border: 1px solid #ddd;">3</td>
+            <td style="border: 1px solid #ddd;">3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Ferramenta de busca e filtros</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de um recurso que permitisse buscar o perfil de cada vereador por nome, partido e atuação em temas específicos.</td>
+            <td style="border: 1px solid #ddd;">Baixa</td>
+            <td style="border: 1px solid #ddd;">5</td>
+            <td style="border: 1px solid #ddd;">3</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd;">Informação sobre reeleição de vereadores</td>
+            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de saber quais vereadores estão se reelegendo.</td>
+            <td style="border: 1px solid #ddd;">Média</td>
+            <td style="border: 1px solid #ddd;">1</td>
+            <td style="border: 1px solid #ddd;">3</td>
         </tr>
         <tr>
             <td style="border: 1px solid #ddd;">Feedback do eleitorado</td>
             <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar comentários relevantes do eleitorado sobre cada vereador, assim como a classificação atribuída a cada um deles.</td>
             <td style="border: 1px solid #ddd;">Baixa</td>
             <td style="border: 1px solid #ddd;">3</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd;">Lista completa de todos os vereadores atuais</td>
-            <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar uma lista completa de todos os vereadores em atuação.</td>
-            <td style="border: 1px solid #ddd;">Alta</td>
-            <td style="border: 1px solid #ddd;">1</td>
+            <td style="border: 1px solid #ddd;">3</td>
         </tr>
     </tbody>
 </table>
@@ -174,6 +204,21 @@ especiais e permanentes
 - Página Informativa
 - Página Comparação
 - Modal
+
+## Sprint 2
+
+- Adicionar TailwindCSS
+- Adicionar Tailwind na página Home
+- Deixar a página Home responsiva
+- Adicionar Tailwind na página Perfil
+- Deixar a página Perfil responsiva
+- Adicionar Tailwind na página Comparação
+- Deixar a página Comparação responsiva
+- Coletar informções sobre os vereadores
+- Finalizar o Banco de Dados
+- Implementar Tailwind no Header
+- Estudar/escolher biblioteca de gráficos
+- Continuar raspagem
 
 # Autores
 
