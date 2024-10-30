@@ -38,6 +38,7 @@ Criar as páginas do site e sua estrutura permitindo a navegação entre elas
 ### Objetivo da Sprint
 Adicionar Tailwind para deixar as páginas resposivas e começar a integração das páginas com o banco de dados
 
+[![MVP - Sprint 2](https://img.youtube.com/vi/xRuLMWFXutc/0.jpg)](https://youtu.be/xRuLMWFXutc)
 
 ## Tecnologias
 
@@ -124,7 +125,7 @@ Adicionar Tailwind para deixar as páginas resposivas e começar a integração 
             <td style="border: 1px solid #ddd;">Eu, como cidadão, gostaria de visualizar um painel de estatísticas contendo a atuação geral de cada vereador na Câmara, comparando o desempenho entre eles.</td>
             <td style="border: 1px solid #ddd;">Média</td>
             <td style="border: 1px solid #ddd;">5</td>
-            <td style="border: 1px solid #ddd;">2</td>
+            <td style="border: 1px solid #ddd;">3</td>
         </tr>
         <tr>
             <td style="border: 1px solid #ddd;">Presença nas Sessões</td>
