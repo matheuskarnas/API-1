@@ -43,3 +43,9 @@ main,
 footer {
   padding: 0 10%;
 }
+
+@media (max-width: 640px) {
+header{
+  padding:10px
+  }
+}

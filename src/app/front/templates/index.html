@@ -5,7 +5,6 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
       <title>Debbugers | Homepage</title>
    </head>
-
    <!-- Header -->
    <header>
       <!-- Logo team -->
@@ -25,7 +24,6 @@
       </div>
    </header>
    <body>
-
       <!-- Main para iniciar a aplicação -->
       <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
       <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
@@ -34,45 +32,49 @@
          <div class="item flex flex-col items-center gap-2">
             <!-- Botão para abrir o modal -->
             <button class="open-modal" data-id="{{ vereador[0] }}" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
-               <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
+            <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
             </button>
             <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
          </div>
          {% endfor %}
       </main>
-      <!-- Estrutura do Modal  -->
-      <div id="fade" class="hide"></div>
-      <div id="modal" class="hide">
-         <div class="left">
-            <img id="modal-img" src="" alt="Imagem do Candidato" />
-         </div>
-         <div class="right">
-            <div class="name">
-               <h1>Nome</h1>
-               <p id="modal-nome"></p>
-            </div>
-            <div class="tel">
-               <h1>Telefone</h1>
-               <p id="modal-tel"></p>
-            </div>
-            <div class="partido">
-               <h1>Partido</h1>
-               <p id="modal-partido"></p>
-            </div>
-            <div class="email">
-               <h1>Email</h1>
-               <p id="modal-email"></p>
-            </div>
-            <a href="/compPage"><button class="comparation">Comparar</button></a>
-            <a><button class="aboutmore">Saiba mais</button></a>
-            
-            <button id="close-modal" class="close-modal bg-green-500">Voltar</button>
-
-         </div>
+        <!-- Estrutura do Modal -->
+        <div id="fade" class="hide fixed top-0 left-0 w-full h-full bg-[#00000099] z-[5]"></div>
+        <div id="modal" class="hide flex flex-col sm:flex-row md:flex-row justify-center items-center fixed left-1/2 top-1/2 z-10 w-[500px] max-w-[90%] p-5 mx-auto rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-white">
+           <div class="left flex justify-center items-center mr-2.5 rounded-md sm:w-[90%] w-[50%]">
+                 <img class="w-[90%] h-100px" id="modal-img" src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}" alt="Imagem do Candidato"/>
+           </div>
+           <div class="right grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[2fr_2fr_2fr_1fr_1fr] w-full gap-2">
+                 <div class="name col-span-1">
+                    <h1 class="text-lg">Nome</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-nome"></p>
+                 </div>
+                 <div class="tel col-span-1">
+                    <h1 class="text-lg">Telefone</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-tel"></p>
+                 </div>
+                 <div class="partido col-span-2">
+                    <h1 class="text-lg">Partido</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-partido"></p>
+                 </div>
+                 <div class="email col-span-2">
+                    <h1 class="text-lg">Email</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-email"></p>
+                 </div>
+                 <a href="compPage" class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline">
+                    <button class="comparation bg-transparent border-none text-white cursor-pointer">Comparar</button>
+                 </a>
+                 <a class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline">
+                    <button class="bg-transparent border-none text-white cursor-pointer aboutmore">Saiba mais</button>
+                 </a>
+                 <button id="close-modal" class="close-modal bg-[#ef4444] col-span-2 border-none rounded text-white cursor-pointer">Voltar</button>
+           </div>
       </div>
+        
 
 
-      <!-- Link para o arquivo JS -->
-      <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
    </body>
 </html>

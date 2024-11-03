@@ -7,7 +7,7 @@ vereadorPage = Blueprint('vereador', __name__)
 
 @vereadorPage.route('/')  
 def listar_vereadores():
-    sql = 'SELECT * FROM tb_vereador'
+    sql = 'SELECT * FROM tb_vereador order by vere_nome asc'
     con = mysql.connector.connect(**datacfg)
     cur = con.cursor()
     cur.execute(sql)
@@ -31,6 +31,12 @@ def detalhes_vereador(id):
     
 @vereadorPage.route('/compPage')
 def comparationPage():
+    # sql = 'SELECT * FROM tb_vereador WHERE vere_id = %s'
+    # con = mysql.connector.connect(**datacfg)
+    # cur = con.cursor()
+    # cur.execute(sql, (id,))
+    # vereador = cur.fetchone()
+    # con.close()
     return render_template('comparationPage.html')
 
 
