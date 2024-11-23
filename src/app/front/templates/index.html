@@ -26,13 +26,13 @@
    <body>
       <!-- Main para iniciar a aplicação -->
       <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
-      <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
+      <!-- 0 - ID ; 1 - Nome ; 2 - Partido ; 3 - Email ; 4 - Telefone; 5 - Texto Perfil ; 6 - URL FOTO -->
       <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
          {% for vereador in vereadores %}
          <div class="item flex flex-col items-center gap-2">
             <!-- Botão para abrir o modal -->
-            <button class="open-modal" data-id="{{ vereador[0] }}" data-nome="{{ vereador[1] }}" data-img="{{ vereador[2] }}" data-tel="{{ vereador[6] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[5] }}">
-            <img src="{{ vereador[2] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
+            <button class="open-modal" data-id="{{ vereador[0] }}" data-nome="{{ vereador[1] }}" data-img="{{ vereador[6] }}" data-tel="{{ vereador[4] }}" data-partido="{{ vereador[3] }}" data-email="{{ vereador[4] }}">
+            <img src="{{ vereador[6] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
             </button>
             <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
          </div>
