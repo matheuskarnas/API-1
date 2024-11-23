@@ -45,3 +45,53 @@ document.addEventListener('DOMContentLoaded', function () {
        fade.classList.add('hide');
     });
   });
+
+// Captura as estrelas e define a avaliação inicial
+const stars = document.querySelectorAll('.star');
+let currentRating = 0;
+
+// Função para atualizar as estrelas com base na avaliação
+function updateStars(rating) {
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.style.color = 'gold'; 
+            star.classList.add('selected');
+        } else {
+            star.style.color = 'gray'; 
+            star.classList.remove('selected');
+        }
+    });
+}
+
+// Adiciona o evento de clique para cada estrela
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        currentRating = parseInt(star.getAttribute('data-index'));
+        updateStars(currentRating); 
+    });
+
+    star.addEventListener('mouseover', function() {
+        updateStars(parseInt(star.getAttribute('data-index')));
+    });
+
+    star.addEventListener('mouseout', function() {
+        updateStars(currentRating); 
+    });
+});
+
+// Inicializa as estrelas como vazias
+updateStars(0);
+
+document.querySelector("form").addEventListener("submit", function(e) {
+   if (currentRating === 0) {
+       e.preventDefault();
+       alert("Por favor, selecione uma avaliação.");
+       return;
+   }
+
+   const inputRating = document.createElement("input");
+   inputRating.type = "hidden";
+   inputRating.name = "come_avaliacao"; 
+   inputRating.value = currentRating;  
+   this.appendChild(inputRating); 
+});

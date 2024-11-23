@@ -12,10 +12,10 @@
 
       <!-- 0 - ID ; 1 - Nome ; 2 - URL ; 3 - Partido ; 4 - Reelegendo? 1 / 0 ; 5 - Email ; 6 - Telefone -->
 
-<main class="flex flex-col items-center gap-5 p-4">
+<main class="flex flex-col items-center gap-5 p-4 bg-[#D3D3D3]">
     <div class="flex flex-col md:flex-row gap-5 w-full">
         <div class="card-biografia p-5 rounded-2xl bg-white w-full md:w-1/3" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
-          <img src="{{ vereador[2]}}" alt="" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+          <img src="{{ vereador[2]}}" alt="" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover object-top">
             <h1 class="text-2xl text-center mb-3">Candidato(a)</h1>
             <p class="text-center">Nome: {{ vereador[1]}}</p>
             <p class="text-center">Telefone: {{ vereador[6]}}</p>
@@ -42,8 +42,8 @@
         </div>
     </div>
     <div class="flex flex-col md:flex-row gap-5 w-full">
-        <div class="card-posições-apresentadas p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
-            <h1 class="text-2xl text-center mb-3">Proposições apresentadas</h1>
+        <div class="card-histórico-político p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mb-3">Histórico político</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -58,31 +58,80 @@
         </div>
     </div>
     <div class="flex flex-col md:flex-row gap-5 w-full">
-        <div class="card-histórico-político rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
-            <h1 class="text-2xl text-center mt-5 mb-3">Histórico político</h1>
-            <p class="ml-5 mr mr-5">
+        <div class="card-posições-apresentadas rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <h1 class="text-2xl text-center mt-5 mb-3">Proposições apresentadas</h1>
+            <p class="mx-5 mb-3 pb-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-          </div>
-    <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
-        <h1 class="text-xl text-center mb-3">Comentários</h1>
-        <div class="caixa-comentário flex flex-col gap-4">
-            <img src="../static/images/img_ex_cand.png" alt="Comentário" class="w-12 h-12" />
-            <input
-                type="text"
-                placeholder="Nome de usuário"
-                class="border rounded p-2"
-                required
-            />
-            <label for="datapublicação">Data de publicação:</label>
-            <input
-                type="date"
-                id="datapublicação"
-                class="border rounded p-2"
-            />
-            <textarea maxlength="300" class="border rounded p-2" required></textarea>
-            <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+    <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+        <div class="caixa-comentário flex flex-col">
+            <form class="w-full" method="POST">          
+                <div class="flex flex-col gap-4 w-full">
+                    <input
+                        type="text"
+                        name="come_usuario"
+                        placeholder="Nome de usuário"
+                        class="border rounded p-2"
+                        required
+                    />
+                    <!-- <div class="flex items-center gap-2">
+                        <label for="datapublicação" class="mb-0">Data de publicação:</label>
+                        <input
+                            type="date"
+                            id="datapublicação"
+                            class="border rounded p-2 w-36"
+                        />
+                    </div> -->
+
+                    <div class="rating flex text-4xl gap-2">
+                        <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="1" onclick="setRating(1)">&#9733;</span>
+                        <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="2" onclick="setRating(2)">&#9733;</span>
+                        <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="3" onclick="setRating(3)">&#9733;</span>
+                        <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="4" onclick="setRating(4)">&#9733;</span>
+                        <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="5" onclick="setRating(5)">&#9733;</span>
+                    </div>
+        
+                    <textarea name="come_texto" maxlength="300" class="border rounded p-2 bg-[#D3D3D3]" required></textarea>
+                    <button type="submit" class="btn btn-primary flex bg-[#D3D3D3] w-16 justify-center text-lg rounded-2xl">Enviar</button>
+                </div>
+            </form>  
+        </div>
+    </div>
+    <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
+            <div class="comentarios">
+                <h1 class="text-xl text-center pb-10">Comentários</h1>   
+                {% if comentarios %}
+                    <div class="come_lista space-y-6">
+                        {% for comentario in comentarios %}
+                            <div class="comentario p-6 bg-white rounded-lg shadow-lg border-t-4 border-gray-500">
+                                <div class="comentario-header flex flex-col space-y-2">
+                                    <strong class="text-xl font-semibold text-gray-800">{{ comentario[1] }}</strong>
+                                    <div class="flex items-center space-x-2">
+                                        <!-- Exibe a avaliação com as estrelas -->
+                                        <span class="avaliacao text-lg font-medium">
+                                            {{ comentario[5] }}
+                                            <span class="text-yellow-500 text-xl">&#9733;</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="comentario-body mt-2 text-gray-700">
+                                    <p>{{ comentario[3] }}</p>
+                                </div>
+                                <div class="comentario-footer mt-4 text-sm text-gray-500">
+                                    <small>{{ comentario[2] }}</small>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-center text-lg text-gray-600">Este vereador ainda não tem comentários.</p>
+                {% endif %}
+            </div>                                 
         </div>
     </div>
 </main>
+
+<script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
