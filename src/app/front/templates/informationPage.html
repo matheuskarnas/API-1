@@ -33,12 +33,12 @@
     <div class="flex flex-col md:flex-row gap-5 w-full">
         <div class="card-presença p-5 rounded-2xl bg-white w-full md:w-2/5" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
             <h1 class="text-2xl text-center mb-3">Presença nas sessões</h1>
-            <img src="../static/images/grafico.png" class="w-full h-72 object-cover" />
+            <canvas id="presenca" width="100%" height="100%"></canvas>
         </div>
 
         <div class="card-posicionamento p-5 rounded-2xl bg-white w-full md:w-3/5" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
             <h1 class="text-2xl text-center mb-3">Posicionamento nas votações</h1>
-            <img src="../static/images/grafico.png" class="w-full h-72 object-cover" />
+            <canvas id="posicionamento"></canvas>
         </div>
     </div>
     <div class="flex flex-col md:flex-row gap-5 w-full">
@@ -86,3 +86,5 @@
         </div>
     </div>
 </main>
+<script src="../static/scripts/presenca.js"></script>
+<script src="../static/scripts/posicionamento.js"></script>
