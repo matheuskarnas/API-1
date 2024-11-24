@@ -12,6 +12,7 @@ def listar_vereadores():
     cur = con.cursor()
     cur.execute(sql)
     vereadores = cur.fetchall() 
+    print(vereadores)
     con.close()  
     return render_template('index.html', vereadores=vereadores)
 
@@ -40,21 +41,28 @@ def detalhes_vereador(id):
         con.commit()
 
         return redirect(url_for('vereador.detalhes_vereador', id=id))
+    
+
+    sql_proposicoes = 'select * from tb_proposicoes where vere_id = %s'
+    cur = con.cursor()
+    cur.execute(sql_proposicoes,(id,))
+    proposicoes = cur.fetchall()
+    print(proposicoes)
 
     con.close()
     if vereador:
-        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios)
+        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios,  proposicoes = proposicoes)
     else:
         return "Vereador não encontrado!", 404
     
-@vereadorPage.route('/compPage/<int:id>',  methods=['GET'])
-def comparationPage(id):
-    sql = 'SELECT vere_nome, vere_id, vere_foto FROM db_vereadores.tb_vereador'
-    con = mysql.connector.connect(**datacfg)
-    cur = con.cursor()
-    cur.execute(sql)
-    vereadores = cur.fetchall()
-    con.close()
-    return render_template('comparationPage.html', vereadores=vereadores, id=id)
+# @vereadorPage.route('/compPage')
+# def comparationPage():
+#     sql = 'SELECT * FROM tb_vereador WHERE vere_id = %s'
+#     con = mysql.connector.connect(**datacfg)
+#     cur = con.cursor()
+#     cur.execute(sql, (id,))
+#     vereador = cur.fetchone()
+#     con.close()
+    # return render_template('comparationPage.html')
 
 

@@ -1,131 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    {% include 'head.html' %}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='css/index.css') }}"
-    />
-    <title>Debbugers | Homepage</title>
-  </head>
-  <!-- Header -->
-  <header>
-    <!-- Logo team -->
-    <a href="/">
+   <head>
+      {% include 'head.html' %}
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+      <title>Debbugers | Homepage</title>
+   </head>
+   <!-- Header -->
+   <header>
+      <!-- Logo team -->
+      <a href="/">
       <img src="{{ url_for('static', filename='images/logo.png') }}" />
-    </a>
-    <div class="right">
-      <!-- Botão de buscar por filtros -->
-      <input id="btn-filter" type="submit" value="Filtro" name="filter" />
-      <!-- Input de busca por nome, partido, comissões, etc. -->
-      <input
-        id="btn-search"
-        type="text"
-        name="search"
-        placeholder="Pesquise aqui"
-      />
-    </div>
-  </header>
-  <body>
-    <!-- Main para iniciar a aplicação -->
-    <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
-    <!-- 0 - ID ; 1 - Nome ; 2 - Partido ; 3 - Email ; 4 - Telefone; 5 - Texto Perfil ; 6 - URL FOTO -->
-    <main
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12"
-    >
-      {% for vereador in vereadores %}
-      <div class="item flex flex-col items-center gap-2">
-        <!-- Botão para abrir o modal -->
-        <button
-          class="open-modal"
-          data-id="{{ vereador[0] }}"
-          data-nome="{{ vereador[1] }}"
-          data-img="{{ vereador[6] }}"
-          data-tel="{{ vereador[4] }}"
-          data-partido="{{ vereador[2] }}"
-          data-email="{{ vereador[3] }}"
-        >
-          <img
-            src="{{ vereador[6] }}"
-            class="rounded-xl shadow-xl max-h-100"
-            alt="{{ vereador[1] }}"
-          />
-        </button>
-        <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
+      </a>
+      <div class="right">
+         <!-- Botão de buscar por filtros -->
+         <input id="btn-filter" type="submit" value="Filtro" name="filter" />
+         <!-- Input de busca por nome, partido, comissões, etc. -->
+         <input
+            id="btn-search"
+            type="text"
+            name="search"
+            placeholder="Pesquise aqui"
+            />
       </div>
-      {% endfor %}
-    </main>
-    <!-- Estrutura do Modal -->
-    <div
-      id="fade"
-      class="hide fixed top-0 left-0 w-full h-full bg-[#00000099] z-[5]"
-    ></div>
-    <div
-      id="modal"
-      class="hide flex flex-col sm:flex-row md:flex-row justify-center items-center fixed left-1/2 top-1/2 z-10 w-[500px] max-w-[90%] p-5 mx-auto rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-white"
-    >
-      <div
-        class="left flex justify-center items-center mr-2.5 rounded-md sm:w-[90%] w-[50%]"
-      >
-        <img
-          class="w-[90%] h-100px"
-          id="modal-img"
-          src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}"
-          alt="Imagem do Candidato"
-        />
+   </header>
+   <body>
+      <!-- Main para iniciar a aplicação -->
+      <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
+      <!-- 0 - ID ; 1 - Nome ; 2 - Partido ; 3 - Email ; 4 - Telefone; 5 - Texto Perfil ; 6 - URL FOTO -->
+      <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10 mt-12">
+         {% for vereador in vereadores %}
+         <div class="item flex flex-col items-center gap-2">
+            <!-- Botão para abrir o modal -->
+            <button class="open-modal" data-id="{{ vereador[0] }}" data-nome="{{ vereador[1] }}" data-img="{{ vereador[6] }}" data-tel="{{ vereador[4] }}" data-partido="{{ vereador[2] }}" data-email="{{ vereador[3] }}">
+            <img src="{{ vereador[6] }}" class="rounded-xl shadow-xl max-h-100" alt="{{ vereador[1] }}">
+            </button>
+            <h2 class="text-lg leading-20">{{ vereador[1] }}</h2>
+         </div>
+         {% endfor %}
+      </main>
+        <!-- Estrutura do Modal -->
+        <div id="fade" class="hide fixed top-0 left-0 w-full h-full bg-[#00000099] z-[5]"></div>
+        <div id="modal" class="hide flex flex-col sm:flex-row md:flex-row justify-center items-center fixed left-1/2 top-1/2 z-10 w-[500px] max-w-[90%] p-5 mx-auto rounded-lg transform -translate-x-1/2 -translate-y-1/2 bg-white">
+           <div class="left flex justify-center items-center mr-2.5 rounded-md sm:w-[90%] w-[50%]">
+                 <img class="w-[90%] h-100px" id="modal-img" src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}" alt="Imagem do Candidato"/>
+           </div>
+           <div class="right grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[2fr_2fr_2fr_1fr_1fr] w-full gap-2">
+                 <div class="name col-span-1">
+                    <h1 class="text-lg">Nome</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-nome"></p>
+                 </div>
+                 <div class="tel col-span-1">
+                    <h1 class="text-lg">Telefone</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-tel"></p>
+                 </div>
+                 <div class="partido col-span-2">
+                    <h1 class="text-lg">Partido</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-partido"></p>
+                 </div>
+                 <div class="email col-span-2">
+                    <h1 class="text-lg">Email</h1>
+                    <p class="text-base text-[#6b7280]" id="modal-email"></p>
+                 </div>
+                 <a href="compPage" class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline">
+                    <button class="comparation bg-transparent border-none text-white cursor-pointer">Comparar</button>
+                 </a>
+                 <a class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline">
+                    <button class="bg-transparent border-none text-white cursor-pointer aboutmore">Saiba mais</button>
+                 </a>
+                 <button id="close-modal" class="close-modal bg-[#ef4444] col-span-2 border-none rounded text-white cursor-pointer">Voltar</button>
+           </div>
       </div>
-      <div
-        class="right grid grid-cols-[repeat(2,minmax(0,1fr))] grid-rows-[2fr_2fr_2fr_1fr_1fr] w-full gap-2"
-      >
-        <div class="name col-span-1">
-          <h1 class="text-lg">Nome</h1>
-          <p class="text-base text-[#6b7280]" id="modal-nome"></p>
-        </div>
-        <div class="tel col-span-1">
-          <h1 class="text-lg">Telefone</h1>
-          <p class="text-base text-[#6b7280]" id="modal-tel"></p>
-        </div>
-        <div class="partido col-span-2">
-          <h1 class="text-lg">Partido</h1>
-          <p class="text-base text-[#6b7280]" id="modal-partido"></p>
-        </div>
-        <div class="email col-span-2">
-          <h1 class="text-lg">Email</h1>
-          <p class="text-base text-[#6b7280]" id="modal-email"></p>
-        </div>
-        <a
-          class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline"
-        >
-          <button
-            class="bg-transparent border-none text-white cursor-pointer compare"
-          >
-            Comparar
-          </button>
-        </a>
-        <a
-          class="col-span-2 sm:col-span-1 flex justify-center items-center border-none rounded text-white bg-[#1d74e6] cursor-pointer no-underline"
-        >
-          <button
-            class="bg-transparent border-none text-white cursor-pointer aboutmore"
-          >
-            Saiba mais
-          </button>
-        </a>
-        <button
-          id="close-modal"
-          class="close-modal bg-[#ef4444] col-span-2 border-none rounded text-white cursor-pointer"
-        >
-          Voltar
-        </button>
-      </div>
-    </div>
+        
+
 
     <!-- Scripts -->
-    <script
-      src="{{ url_for('static', filename='scripts/script.js') }}"
-      defer
-    ></script>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-  </body>
+   </body>
 </html>
+
+
+ 
