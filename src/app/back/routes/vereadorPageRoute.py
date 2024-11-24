@@ -53,8 +53,16 @@ def detalhes_vereador(id):
     cur = con.cursor()
     cur.execute(sql_proposicoes,(id,))
     proposicoes = cur.fetchall()
-
-        
+    
+    sql_mandatos = 'SELECT * from tb_mandato WHERE vere_id = %s order by mand_ano desc'
+    cur.execute(sql_mandatos,(id,))
+    mandatos = cur.fetchall()
+    
+    sql_mandatos = 'SELECT * from tb_parlamentar_comissao WHERE parlamentar_id = %s order by comissao_nome asc'
+    cur.execute(sql_mandatos,(id,))
+    comissoes = cur.fetchall()
+    
+    
     sql = 'SELECT * FROM tb_frequencia_plenario where vere_id = %s'
     con = mysql.connector.connect(**datacfg)
     cur = con.cursor()
@@ -72,7 +80,7 @@ def detalhes_vereador(id):
 
     con.close()
     if vereador:
-        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios,  proposicoes = proposicoes)
+        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios,  proposicoes = proposicoes, mandatos=mandatos, comissoes=comissoes)
     else:
         return "Vereador não encontrado!", 404
 
