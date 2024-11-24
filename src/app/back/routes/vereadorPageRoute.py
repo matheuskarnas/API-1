@@ -41,17 +41,10 @@ def detalhes_vereador(id):
         con.commit()
 
         return redirect(url_for('vereador.detalhes_vereador', id=id))
-    
-
-    sql_proposicoes = 'select * from tb_proposicoes where vere_id = %s'
-    cur = con.cursor()
-    cur.execute(sql_proposicoes,(id,))
-    proposicoes = cur.fetchall()
-    print(proposicoes)
 
     con.close()
     if vereador:
-        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios,  proposicoes = proposicoes)
+        return render_template('informationPage.html', vereador=vereador, comentarios=comentarios)
     else:
         return "Vereador não encontrado!", 404
     

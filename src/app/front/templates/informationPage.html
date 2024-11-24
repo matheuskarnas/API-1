@@ -60,57 +60,10 @@
     <div class="flex flex-col md:flex-row gap-5 w-full">
         <div class="card-posições-apresentadas rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
             <h1 class="text-2xl text-center mt-5 mb-3">Proposições apresentadas</h1>
-
-
-            <div class="container mx-auto p-4">
-                <div class="overflow-x-auto">
-                    <table id="proposicoes-table" class="display" >
-                        <thead>
-                            <tr>
-                                <th>Processo</th>
-                                <th>Tipo</th>
-                                <th>Assunto</th>
-                                <th>Data</th>
-                                <th>Situação</th>
-                                <th>Documento</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- 
-                            0 - ID
-                            1 - processo
-                            2 - sigla
-                            3 - tipo
-                            4 - assunto
-                            5 - data
-                            6 - protocolo
-                            7 - situacao
-                            8 - arquivo
-                            -->
-                            {% for proposicao in proposicoes %}
-                            <tr>
-                                <td>{{ proposicao[1] }}</td>
-                                <td>{{ proposicao[3] }}</td>
-                                <td>{{ proposicao[4] }}</td>
-                                <td>{{ proposicao[5] }}</td>
-                                <td>{{ proposicao[7] }}</td>
-                                <td><a style="color:red" href="{{ proposicao[8] }}" target="_blank" rel="noopener noreferrer">Clique aqui!</a></td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                    
-                                  <!-- Botões de Paginação -->
-                <div class="flex justify-between items-center mt-4">
-                    <button id="prev-page" class="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50" disabled>Anterior</button>
-                    <span id="current-page" class="text-gray-700"></span>
-                    <button id="next-page" class="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50">Próxima</button>
-                  </div>
-                </div>
-
-            </div>
-
-
+            <p class="mx-5 mb-3 pb-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </div>
     <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
@@ -124,6 +77,14 @@
                         class="border rounded p-2"
                         required
                     />
+                    <!-- <div class="flex items-center gap-2">
+                        <label for="datapublicação" class="mb-0">Data de publicação:</label>
+                        <input
+                            type="date"
+                            id="datapublicação"
+                            class="border rounded p-2 w-36"
+                        />
+                    </div> -->
 
                     <div class="rating flex text-4xl gap-2">
                         <span class="star cursor-pointer text-gray-400 transition-colors duration-200 ease-in-out hover:text-yellow-500" data-index="1" onclick="setRating(1)">&#9733;</span>
@@ -176,16 +137,3 @@
 <script src="../static/scripts/posicionamento.js"></script>
 
 <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
-
-<script>
-    $(document).ready(function() {
-        $('#proposicoes-table').DataTable({
-            processing: true, // Exibe um indicador de carregamento
-            scrollY: '600px', 
-            scrollCollapse: true, 
-            language: {
-            url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json"
-        }
-        });
-    });
-</script>
