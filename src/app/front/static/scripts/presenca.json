@@ -1,0 +1,86 @@
+[
+    {
+        "freq_id": 1,
+        "freq_situacao": "Presente",
+        "freq_ano": 2024,
+        "freq_quantidade": 62,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 2,
+        "freq_situacao": "Presente",
+        "freq_ano": 2023,
+        "freq_quantidade": 77,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 3,
+        "freq_situacao": "Presente",
+        "freq_ano": 2022,
+        "freq_quantidade": 84,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 4,
+        "freq_situacao": "Presente",
+        "freq_ano": 2021,
+        "freq_quantidade": 86,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 5,
+        "freq_situacao": "Falta",
+        "freq_ano": 2024,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 6,
+        "freq_situacao": "Falta",
+        "freq_ano": 2023,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 7,
+        "freq_situacao": "Falta",
+        "freq_ano": 2022,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 8,
+        "freq_situacao": "Falta",
+        "freq_ano": 2021,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 9,
+        "freq_situacao": "Falta Justificada",
+        "freq_ano": 2024,
+        "freq_quantidade": 2,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 10,
+        "freq_situacao": "Falta Justificada",
+        "freq_ano": 2023,
+        "freq_quantidade": 3,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 11,
+        "freq_situacao": "Falta Justificada",
+        "freq_ano": 2022,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    },
+    {
+        "freq_id": 12,
+        "freq_situacao": "Falta Justificada",
+        "freq_ano": 2021,
+        "freq_quantidade": 0,
+        "vere_id": 1137
+    }
+]

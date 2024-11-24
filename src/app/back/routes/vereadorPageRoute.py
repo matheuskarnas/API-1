@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, url_for, redirect
 import mysql.connector
 from config import Config, datacfg
 import os
+import json
 
 vereadorPage = Blueprint('vereador', __name__)
 
@@ -47,7 +48,22 @@ def detalhes_vereador(id):
     cur = con.cursor()
     cur.execute(sql_proposicoes,(id,))
     proposicoes = cur.fetchall()
-    print(proposicoes)
+
+        
+    sql = 'SELECT * FROM tb_frequencia_plenario where vere_id = %s'
+    con = mysql.connector.connect(**datacfg)
+    cur = con.cursor()
+    cur.execute(sql,(id,))
+    presenca = cur.fetchall()
+
+    print(f"Total de registros retornados: {len(presenca)}")
+
+    presenca_list = [{'freq_id': row[0], 'freq_situacao': row[1], 'freq_ano': row[2],'freq_quantidade': row[3], 'vere_id': row[4]} for row in presenca]
+    folder_path = 'front\static\scripts'
+    file_path = os.path.join(folder_path, 'presenca.json')
+
+    with open(file_path, 'w') as json_file:
+        json.dump(presenca_list, json_file,indent = 4)
 
     con.close()
     if vereador:
