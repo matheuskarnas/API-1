@@ -71,13 +71,38 @@ def detalhes_vereador(id):
     else:
         return "Vereador não encontrado!", 404
     
-@vereadorPage.route('/compPage/<int:id>',  methods=['GET'])
+@vereadorPage.route('/compPage/<int:id>',  methods=['GET','POST'])
 def comparationPage(id):
+    
+    #Primeiro vereador
+    sql_principal = 'SELECT vere_nome, vere_id, vere_foto FROM tb_vereador WHERE vere_id = %s'
+    con = mysql.connector.connect(**datacfg)
+    cur = con.cursor()
+    cur.execute(sql_principal, (id,))
+    vereador1 = cur.fetchone()
+    
+    #Busca todos os vereadores
     sql = 'SELECT vere_nome, vere_id, vere_foto FROM db_vereadores.tb_vereador'
     con = mysql.connector.connect(**datacfg)
     cur = con.cursor()
     cur.execute(sql)
     vereadores = cur.fetchall()
+    
+    # Processa a seleção do vereador secundário
+    vereador2 = None
+    if request.method == 'POST':
+        vereador2_id = request.form.get('vereador2')
+        sql_secundario = 'SELECT vere_nome, vere_id, vere_foto FROM tb_vereador WHERE vere_id = %s'
+        cur.execute(sql_secundario, (vereador2_id,))
+        vereador2 = cur.fetchone()
+    
     con.close()
-    return render_template('comparationPage.html', vereadores=vereadores, id=id)
+    
+    return render_template(
+        'comparationPage.html',
+        vereador1=vereador1,
+        vereador2=vereador2,
+        vereadores=vereadores
+    )
+
 
