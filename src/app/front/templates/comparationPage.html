@@ -20,46 +20,54 @@
           <div class="vereador-principal flex justify-center items-center">
             <img
               class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
-              src="{{url_for('static' , filename='images/VER. AMÉLIA NAOMI.jpg')}}"
-              alt="Imagem do Candidato"
+              src="{{vereador1[2]}}"
+              alt="Imagem do Candidato: {{ vereador1[0] }}"
             />
           </div>
           <!-- Vereador Secundário -->
-          <div class="vereador-secondary flex justify-center items-center">
-            <img
-              class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
-              src="{{url_for('static' , filename='images/img_ex_cand.png')}}"
-              alt="Imagem do Candidato"
-            />
-          </div>
+          {% if vereador2 %}
+          <img
+            class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
+            src="{{ vereador2[2] }}"
+            alt="Imagem do Candidato: {{ vereador2[0] }}"
+          />
+          {% else %}
+          <img
+            class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
+            src="{{ url_for('static', filename='images/img_ex_cand.png') }}"
+            alt="Imagem do Candidato"
+          />
+          {% endif %}
         </div>
         <div
           class="buttons-vereadores flex justify-between items-center w-full"
         >
           <!-- Input de nome do vereador -->
           <!-- <input type="submit" value="Nome do vereador" id="name-vereador" /> -->
-          <h3 class="ml-5">AMÉLIA NAOMI</h3>
+          <h3 class="ml-5">{{ vereador1[0] }}</h3>
 
           <!-- Seleção de candidato -->
-          <select
-            class="w-[47%] p-1 px-2 mt-1.5 mb-2.5 text-left rounded text-base text-ellipsis custom-shadow text-custom-gray bg-white"
-            name="escolha-candidato"
-            id="escolha-vereador"
-          >
-            <option value="" selected>Escolha um candidato</option>
-            {% for vereador in vereadores %}
-            <option value="{{vereador[1]}}">{{vereador[0]}}</option>
-            {% endfor %}            
-          </select>
+          <form method="POST" class="flex flex-col items-center">
+            <select
+              class="w-[47%] p-1 px-2 mt-1.5 mb-2.5 text-left rounded text-base text-ellipsis custom-shadow text-custom-gray bg-white"
+              name="vereador2"
+              required
+            >
+              <option value="" selected>Escolha um candidato</option>
+              {% for vereador in vereadores %}
+              <option value="{{vereador[1]}}">{{vereador[0]}}</option>
+              {% endfor %}
+            </select>
+            <!-- Botão de Comparar -->
+            <button
+              class="comparar w-full py-2.5 m-2.5 rounded text-xl text-white bg-[#1d74e6] cursor-pointer"
+              id="comparar"
+            >
+              Comparar
+            </button>
+          </section>
+          </form>
         </div>
-        <!-- Botão de Comparar -->
-        <button
-          class="comparar w-full py-2.5 m-2.5 rounded text-xl text-white bg-[#1d74e6] cursor-pointer"
-          id="comparar"
-        >
-          Comparar
-        </button>
-      </section>
 
       <!-- <table class="font-arial border-collapse w-full max-w-[1000px] overflow-x-auto mb-16">
         <tr>
