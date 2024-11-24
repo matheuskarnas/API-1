@@ -85,8 +85,6 @@ main {
   gap: 20px;
 }
 
-.card-foto {
-}
 
 .card-biografia {
   display: flex;
@@ -246,6 +244,39 @@ textarea {
   resize: none;
   background-color: #dcdcdc;
 }
+
+#proposicoes-table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed; /* Garante que as colunas tenham largura fixa */
+  border-collapse: collapse;
+}
+
+
+.card-posições-apresentadas {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .overflow-x-auto {
+  flex: 1;
+  overflow: auto;
+}
+
+#proposicoes-table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed; /* Mantém as colunas alinhadas */
+  border-collapse: collapse;
+}
+
 
 /* @media (max-width: 1000px) {
   Trata responsividade. Tem que configurar

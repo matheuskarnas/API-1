@@ -62,8 +62,8 @@ def detalhes_vereador(id):
     folder_path = 'front\static\scripts'
     file_path = os.path.join(folder_path, 'presenca.json')
 
-    with open(file_path, 'w') as json_file:
-        json.dump(presenca_list, json_file,indent = 4)
+    # with open(file_path, 'w') as json_file:
+    #     json.dump(presenca_list, json_file,indent = 4)
 
     con.close()
     if vereador:
