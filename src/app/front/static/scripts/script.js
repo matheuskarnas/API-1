@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const openModalButtons = document.querySelectorAll('.open-modal');
     const closeModalButton = document.getElementById('close-modal');
     const aboutMoreButton = document.querySelector('.aboutmore');
+    const compareButton = document.querySelector('.compare');
   
     openModalButtons.forEach(button => {
        button.addEventListener('click', () => {
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
           // Adicionar evento de clique ao botão "Saiba mais"
           aboutMoreButton.addEventListener('click', function () {
              window.location.href = `/detalhes/${vereadorId}`;
+          });
+          // Adicionar evento de clique ao botão "Saiba mais"
+          compareButton.addEventListener('click', function () {
+             window.location.href = `/compPage/${vereadorId}`;
           });
        });
     });
