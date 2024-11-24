@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+   <head>
+      {% include 'head.html' %}
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+      <title>Debbugers | Homepage</title>
+   </head>
+   <!-- Header -->
+   <header>
+      <!-- Logo team -->
+      <a href="/">
 
 <head>
    {% include 'head.html' %}
@@ -21,6 +33,10 @@
 </header>
 
 <body>
+   <!-- Título/alerta -->
+   <div class="alert alert-secondary text-center mt-8 mb-4 text-gray-700">
+      <strong>Vereadores candidatos à reeleição, em 2024, no município de São José dos Campos-SP</strong>
+    </div>
    <input type="checkbox" id="toggle-sidebar" class="sr-only peer" />
 
    <!-- Camada de fundo acinzentada -->
