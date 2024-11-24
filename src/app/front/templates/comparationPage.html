@@ -47,13 +47,9 @@
             id="escolha-vereador"
           >
             <option value="" selected>Escolha um candidato</option>
-            <option value="DR. JOSÉ CLAUDIO">Dr. José Claudio</option>
-            <option value="DULCE RITA">Dulce Rita</option>
-            <option value="FABIÃO ZAGUEIRO">Fabião Zagueiro</option>
-            <option value="FERNANDO PETITI">Fernando Petiti</option>
-            <option value="JULIANA FRAGA">Juliana Fraga</option>
-            <option value="JÚNIOR DA FARMÁCIA">Júnior Da Farmácia</option>
-            <option value="JUVENIL SILVÉRIO">Juvenil Silveiro</option>
+            {% for vereador in vereadores %}
+            <option value="{{vereador[1]}}">{{vereador[0]}}</option>
+            {% endfor %}            
           </select>
         </div>
         <!-- Botão de Comparar -->
