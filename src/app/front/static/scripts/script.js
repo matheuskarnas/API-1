@@ -87,7 +87,7 @@ stars.forEach(star => {
 // Inicializa as estrelas como vazias
 updateStars(0);
 
-document.querySelector("form").addEventListener("submit", function(e) {
+document.querySelector(".comentario").addEventListener("submit", function(e) {
    if (currentRating === 0) {
        e.preventDefault();
        alert("Por favor, selecione uma avaliação.");
