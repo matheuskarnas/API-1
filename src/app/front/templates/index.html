@@ -3,6 +3,9 @@
    <head>
       {% include 'head.html' %}
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
       <title>Debbugers | Homepage</title>
    </head>
    <!-- Header -->
@@ -24,6 +27,10 @@
       </div>
    </header>
    <body>
+      <!-- Título/alerta -->
+      <div class="alert alert-secondary text-center mt-8 mb-4 text-gray-700">
+         <strong>Vereadores candidatos à reeleição, em 2024, no município de São José dos Campos-SP</strong>
+       </div>
       <!-- Main para iniciar a aplicação -->
       <!-- Loop para buscar os vereadores disponiveis no banco onde indices: -->
       <!-- 0 - ID ; 1 - Nome ; 2 - Partido ; 3 - Email ; 4 - Telefone; 5 - Texto Perfil ; 6 - URL FOTO -->
