@@ -25,6 +25,7 @@
             />
           </div>
           <!-- Vereador Secundário -->
+          <div class="vereador-secundario flex justify-center items-center">
           {% if vereador2 %}
           <img
             class="w-11/12 h-auto rounded-lg custom-shadow bg-white"
@@ -39,12 +40,18 @@
           />
           {% endif %}
         </div>
+        </div>
         <div
           class="buttons-vereadores flex justify-between items-center w-full"
         >
           <!-- Input de nome do vereador -->
-          <!-- <input type="submit" value="Nome do vereador" id="name-vereador" /> -->
           <h3 class="ml-5">{{ vereador1[0] }}</h3>
+
+          {% if vereador2 %}
+
+          <h3 class="ml-5">{{ vereador1[0] }}</h3>
+
+          {% else %}
 
           <!-- Seleção de candidato -->
           <form method="POST" class="flex flex-col items-center">
@@ -67,25 +74,27 @@
             </button>
           </section>
           </form>
+          {% endif %}
         </div>
 
-      <!-- <table class="font-arial border-collapse w-full max-w-[1000px] overflow-x-auto mb-16">
-        <tr>
-          <td>PT (Partido dos Trabalhadores)</td>
-          <th>PARTIDO</th>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <th>MANDATO</th>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>84%</td>
-          <th>PRESENÇA</th>
-          <td>-</td>
-        </tr>
-        <tr>
+        {% if vereador2 %}        
+        <table class="font-arial border-collapse w-full max-w-[1000px] overflow-x-auto mb-16">
+          <tr>
+            <td>PT (Partido dos Trabalhadores)</td>
+            <th>PARTIDO</th>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <th>MANDATO</th>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>84%</td>
+            <th>PRESENÇA</th>
+            <td>-</td>
+          </tr>
+          <tr>
           <td>5</td>
           <th>COMISSÕES</th>
           <td>-</td>
@@ -107,8 +116,9 @@
           <td>-</td>
         </tr>
       </table>
-    </main> -->
-      <!-- End of Main Content -->
+    </main>
+    {% endif %}
+    
 
       <!-- Footer -->
       <footer
