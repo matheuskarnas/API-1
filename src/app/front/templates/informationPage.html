@@ -62,17 +62,34 @@
    <div class="flex flex-col md:flex-row gap-5 w-full">
       <div class="card-histórico-político p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
          <h1 class="text-2xl text-center mb-3">Histórico político</h1>
-         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+         <div class="space-y-4">
+            {% for mandato in mandatos %}
+            <details class="border-b">
+                <!-- Título do accordion, que ficará visível e clicável -->
+                <summary class="w-full p-5 text-left text-xl font-medium bg-blue-10 rounded-md cursor-pointer hover:bg-blue-200">
+                    {{ mandato[2] }} - {{ mandato[3] }} <!-- Exibe o ano e o cargo -->
+                </summary>
+        
+                <!-- Conteúdo que será mostrado ou escondido ao clicar -->
+                <div class="p-5 bg-gray-50 border-t-2 border-gray-200 rounded-md">
+                    <p><strong>Partido:</strong> {{ mandato[6] }}</p>
+                    <p><strong>Situação:</strong> {{ mandato[7] }}</p>
+                    <p><strong>Localização:</strong> {{ mandato[5] }}{% if mandato[4] %} - {{ mandato[4] }}{% endif %}</p>
+                </div>
+            </details>
+            {% endfor %}
+        </div>        
       </div>
       <div class="card-comissões p-5 rounded-2xl bg-white w-full md:w-2/4" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
          <h1 class="text-2xl text-center mb-3">Comissões</h1>
-         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-         </p>
+         <div class="space-y-4">
+            {% for comissao in comissoes %}
+            <div class="p-5 bg-gray-50 border-t-2 border-gray-200 rounded-md">
+               <p><strong>Comissão:</strong> {{ comissao[4] }}</p>
+               <p><strong>Cargo:</strong> {{ comissao[5] }}</p>
+            </div>
+            {% endfor %}
+         </div>  
       </div>
    </div>
    <div class="flex flex-col md:flex-row gap-5 w-full">
@@ -118,7 +135,7 @@
    </div>
    <div class="card-comentários p-5 rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
       <div class="caixa-comentário flex flex-col">
-         <form class="w-full" method="POST">
+         <form class="w-full comentario" method="POST">
             <div class="flex flex-col gap-4 w-full">
                <input
                   type="text"
