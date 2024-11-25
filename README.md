@@ -40,6 +40,12 @@ Adicionar Tailwind para deixar as páginas resposivas e começar a integração 
 
 [![MVP - Sprint 2](https://img.youtube.com/vi/xRuLMWFXutc/0.jpg)](https://youtu.be/xRuLMWFXutc)
 
+## Sprint 3
+
+### Objetivo da Sprint
+Fazer o display dos dados coletados de cada vereador em sua página e deixar o filtro/busca de vereadores e a comparação entre eles funcional
+
+<!-- [![MVP - Sprint 3](https://img./0.jpg)]() -->
 ## Tecnologias
 
 <div align="center">
@@ -82,11 +88,11 @@ Adicionar Tailwind para deixar as páginas resposivas e começar a integração 
       <span>Jira</span>
     </td>
     <td align="center" width="96">
-      <img src="documentation/images/jupyter.svg" width="48" height="48" alt="Jira"/>
-      <span>Jupyter</span>
+      <img src="documentation/images/javascript.svg" width="48" height="48" alt="JavaScript"/>
+      <span>JavaScript</span>
     </td>
     <td align="center" width="96">
-      <img src="documentation/images/tailwind.png" width="48" height="48" alt="Jira"/>
+      <img src="documentation/images/tailwind.png" width="48" height="48" alt="Tailwind"/>
       <span>Tailwind</span>
     </td>
   </tr>
@@ -220,6 +226,20 @@ Adicionar Tailwind para deixar as páginas resposivas e começar a integração 
 - Implementar Tailwind no Header
 - Estudar/escolher biblioteca de gráficos
 - Continuar raspagem
+
+## Sprint 3
+
+- Implementar sistema de filtragem/busca na pagina Home
+- Implementar a comparação entre vereadores
+- Criação de diferença visual para vereadores se reelegendo
+- Criação dos gráficos
+- Integrar banco de dados para display das preposições
+- Integrar banco de dados para display das comissões
+- Integrar banco de dados para display dos mandatos
+- Integrar banco de dados para display das leis aprovadas
+- Adicionar funcionalidade aos comentários
+- Finalização da raspagem de dados
+
 
 # Autores
 
