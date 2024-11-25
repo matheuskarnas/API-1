@@ -74,12 +74,44 @@ def detalhes_vereador(id):
 @vereadorPage.route('/compPage/<int:id>',  methods=['GET','POST'])
 def comparationPage(id):
     
-    #Primeiro vereador
-    sql_principal = 'SELECT vere_nome, vere_id, vere_foto FROM tb_vereador WHERE vere_id = %s'
+    sql_refinado = '''
+    SELECT 
+        vere_nome, 
+        vere_id, 
+        vere_foto, 
+        vere_partido,
+        (SELECT COUNT(*) 
+         FROM db_vereadores.tb_proposicoes 
+         WHERE vere_id = %s) AS total_proposicoes,
+        (SELECT COUNT(*) 
+         FROM db_vereadores.tb_proposicoes 
+         WHERE vere_id = %s AND sigla = 'req') AS total_requerimentos,
+        (SELECT COUNT(*) 
+         FROM db_vereadores.tb_proposicoes 
+         WHERE vere_id = %s AND sigla = 'MOC') AS total_mocoes,
+        (SELECT COUNT(*) 
+         FROM db_vereadores.tb_vereador_comissao 
+         WHERE vere_id = %s) AS total_comissoes,
+        (SELECT SUM(freq_quantidade) 
+         FROM db_vereadores.tb_frequencia_plenario 
+         WHERE vere_id = %s) AS total_sessoes,
+        (SELECT SUM(freq_quantidade) 
+         FROM db_vereadores.tb_frequencia_plenario 
+         WHERE vere_id = %s AND freq_situacao = 'Presente') AS total_presencas,
+        (SELECT COUNT(*) 
+         FROM db_vereadores.tb_mandato 
+         WHERE vere_id = %s) AS total_mandatos
+    FROM db_vereadores.tb_vereador
+    WHERE vere_id = %s
+'''
+
+    vereador1 = []
     con = mysql.connector.connect(**datacfg)
     cur = con.cursor()
-    cur.execute(sql_principal, (id,))
+    cur.execute(sql_refinado, (id, id, id, id, id, id, id, id))
     vereador1 = cur.fetchone()
+
+    con.close()
     
     #Busca todos os vereadores
     sql = 'SELECT vere_nome, vere_id, vere_foto FROM db_vereadores.tb_vereador'
@@ -92,9 +124,9 @@ def comparationPage(id):
     vereador2 = None
     if request.method == 'POST':
         vereador2_id = request.form.get('vereador2')
-        sql_secundario = 'SELECT vere_nome, vere_id, vere_foto FROM tb_vereador WHERE vere_id = %s'
-        cur.execute(sql_secundario, (vereador2_id,))
+        cur.execute(sql_refinado, (vereador2_id, vereador2_id, vereador2_id, vereador2_id, vereador2_id, vereador2_id, vereador2_id, vereador2_id))
         vereador2 = cur.fetchone()
+        print('vereador2', vereador2)
     
     con.close()
     
@@ -104,5 +136,3 @@ def comparationPage(id):
         vereador2=vereador2,
         vereadores=vereadores
     )
-
-
