@@ -112,6 +112,7 @@ def filtro():
         comissoes_filtradas = ', '.join([f"'{c}'" for c in comissoes])
         consulta += f" AND c.comi_nome IN ({comissoes_filtradas})"
         
+    consulta += ' order by vere_nome'
     
     cur.execute(consulta)
     vereadores = cur.fetchall()
@@ -167,10 +168,10 @@ def comparationPage(id):
     con.close()
     
     #Busca todos os vereadores
-    sql = 'SELECT vere_nome, vere_id, vere_foto FROM db_vereadores.tb_vereador'
+    sql = 'SELECT vere_nome, vere_id, vere_foto FROM db_vereadores.tb_vereador where vere_id != %s order by vere_nome'
     con = mysql.connector.connect(**datacfg)
     cur = con.cursor()
-    cur.execute(sql)
+    cur.execute(sql, (id,))
     vereadores = cur.fetchall()
     
     # Processa a seleção do vereador secundário
