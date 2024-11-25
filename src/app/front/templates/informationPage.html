@@ -1,6 +1,21 @@
 {% include 'head.html'%}
 <!-- Header -->
 <header>
+<style>
+   .tabela{
+      padding:20px;
+
+#proposicoes-table_wrapper {
+   max-height: 600px;
+   overflow-y: auto;
+}
+
+#proposicoes-table {
+   width: 100%;
+}
+
+   }
+</style>
    <!-- Logo team -->
    <a href="/">
    <img src="{{ url_for('static', filename='images/logo.png') }}" />
@@ -95,6 +110,7 @@
    <div class="flex flex-col md:flex-row gap-5 w-full">
       <div class="card-posições-apresentadas rounded-2xl bg-white w-full md:w-full" style="box-shadow: 5px 5px 59px rgba(0, 0, 0, 0.2);">
          <h1 class="text-2xl text-center mt-5 mb-3">Proposições apresentadas</h1>
+         <div class="tabela">
                <table id="proposicoes-table" class="display" style="width: 100%;">
                   <thead>
                      <tr>
@@ -130,6 +146,8 @@
                      {% endfor %}
                   </tbody>
                </table>
+         </div>
+
          </div>
       </div>
    </div>
@@ -206,18 +224,17 @@
 
 <script>
    $(document).ready(function() {
-       $('#proposicoes-table').DataTable({
-           scrollY: '600px',
-           scrollCollapse: true,
-           responsive: true, 
-           language: {
-               url: "{{ url_for('static', filename='scripts/pt-BR.json') }}"
-           },
-           paging: true,
-           lengthChange: true,
-           lengthMenu: [10, 25, 50, 100],
-           pageLength: 10
-       });
+      $(document).ready(function() {
+    var table = $('#proposicoes-table').DataTable({
+        scrollCollapse: true,
+        responsive: true, 
+        language: {
+            url: "{{ url_for('static', filename='scripts/pt-BR.json') }}"
+        },
+        paging: true,
+    });
+});
+
    });
 
    window.onload = function() {
